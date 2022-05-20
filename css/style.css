@@ -17,7 +17,7 @@ body {
 /* estilos del titulo principal */
 .headerInit {
     /*position: sticky;*/
-    margin-bottom: 1rem;
+    /*margin-bottom: 1rem*/
     margin: 1rem;
     padding: 1rem;
 }
@@ -28,28 +28,55 @@ a {
 }
 
 .headerLogo {
-    width: 10rem;
-    height: 10rem;
+    width: 8rem;
+    height: 8rem;
     border-radius: 50%;
-    background: #6AA84F;
+    /*background: #6AA84F;*/
+    background: radial-gradient(circle, #6AA84F, #4AF873);
     margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
     position: center;
+    animation-name: logoItemAction;
+    animation-duration:10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
 .headerLogoTitle {
     color: honeydew;
-    font-size: 30px;
+    font-size: 20px;
     text-decoration: solid;
 }
+
+
+
+@keyframes logoItemAction{
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(30deg);
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+    75%{
+        transform: rotate(-30deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
 /***************************************************/
 /*MENU de todas las paginas*/
 .menu {
-    background-color: #42C2FF;
+    /*background: #42C2FF;*/
+    background: linear-gradient(0deg, #42C2FF,#94bbe9);
     border-radius: 0.5rem;
-    margin: 1rem;
+    margin: 0.5rem;
 }
 
 .menu ul {
@@ -62,7 +89,7 @@ a {
 .menu ul li {
     list-style-type: none;
     color: whitesmoke;
-    font-size: 20px;
+    font-size: 16px;
     margin: 8px;
     position: relative;
     padding: 5px;
@@ -92,9 +119,8 @@ a {
 /*Pagina Inicio */
 .mainInit {
     display: grid;
-    height: 20vh;
     padding: 0.2rem;
-    grid-template-areas: "mainInitVideo"
+    grid-template-areas: "mainInitVideo "
         "mainInitP";
     justify-content: center;
     justify-items: center;
@@ -108,7 +134,7 @@ a {
 
 .mainInitVideo {
     grid-area: mainInitVideo;
-    width: fit-content;
+    width: 100%;
     margin: 10px;
 }
 
@@ -150,7 +176,6 @@ a {
 /*Pagina Inicio */
 .mainAboutUs {
     display: grid;
-    height: 40vh;
     padding: 0.2rem;
     grid-template-areas: "mainAboutUsH2"
         "mainAboutUsImage"
@@ -161,7 +186,7 @@ a {
 
 .mainAboutUsImage{
     grid-area: mainAboutUsImage;
-    width: 80%;
+    width: 100%;
     margin: 0.2rem;
     padding: 0.2rem;
     border-radius: 2rem;
@@ -197,6 +222,12 @@ a {
     border-radius: 2rem;
     margin: 0.5rem;
     padding: 0.5rem;
+    transition: width 1s;
+    
+}
+.item1:hover{
+    width:102%;
+    transform: rotate(5deg);
 }
 .item2{
     width:100%;
@@ -204,13 +235,23 @@ a {
     border-radius: 2rem;
     margin: 0.5rem;
     padding: 0.5rem;
+    transition: width 1s;
+}
+.item2:hover{
+    width:102%;
+    transform: rotate(-5deg);
 }
 .item3{
-    width:100%;
+    width:90%;
     grid-area:imagen3;
     border-radius: 2rem;
     margin: 0.5rem;
     padding: 0.5rem;
+    transition: width 1s;
+}
+.item3:hover{
+    width:95%;
+    transform: rotate(5deg);
 }
 .item4{
     width:100%;
@@ -218,7 +259,13 @@ a {
     border-radius: 2rem;
     margin: 0.5rem;
     padding: 0.5rem;
+    transition: width 1s;
 }
+.item4:hover{
+    width:102%;
+    transform: rotate(-5deg);
+}
+
 /***********************************************************/
 /*Pagina Contacto*/
 /*Formulario*/
@@ -269,23 +316,20 @@ table {
 /**********************************************************/
 /*Estilos footer*/
 .footerInit {
-    margin: 10px;
-    padding: 10px;
-    background-color: #42C2FF;
-    margin-top: 20px;
-    text-align: end;
+    margin-bottom: 1rem;
+    margin: 1rem;
+    padding: 1rem;
     border-radius: 2rem;
+    background: linear-gradient(0deg, #42C2FF,#94bbe9);
+    text-align: end;
 }
 
 .footerInit h3 {
-    margin: 20px;
     font: bold;
     font-size: small;
 }
-
 .footerIcons {
     text-align: end;
-    margin: 20px;
 }
 /**********************************************************/
 /*MEDIA QUERY*/
