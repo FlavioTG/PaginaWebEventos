@@ -16,8 +16,6 @@ body {
 
 /* estilos del titulo principal */
 .headerInit {
-    /*position: sticky;*/
-    /*margin-bottom: 1rem*/
     margin: 1rem;
     padding: 1rem;
 }
@@ -78,21 +76,23 @@ a {
     border-radius: 1rem;
     margin: 1rem;
 }
-
+.navbar-nav.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+}
 .menu ul {
     display: flex;
-    justify-content: space-around;
+    /*justify-content: space-around;*/
     list-style-type: none;
-    text-align: center;
+    /*text-align: center;*/
 }
 
 .menu ul li {
     list-style-type: none;
     color: whitesmoke;
     font-size: 16px;
-    /*margin: 8px;*/
     position: relative;
-    /*padding: 5px;*/
 
 }
 .menu ul li:hover {
@@ -112,6 +112,7 @@ a {
 .sub-menu {
     background-color: #42C2FF;
     padding: 5px;
+    text-align: center;
 }
 
 
@@ -293,6 +294,7 @@ table {
 /***********************************************************/
 /*Pagina Reviews*/
 .mainReviews {
+    
     text-align: center;
 }
 
@@ -303,6 +305,7 @@ table {
 }
 
 .mainReviews ul li {
+    list-style-type: none;
     font-size: 15px;
     text-align: center;
     font-style: italic;
@@ -311,7 +314,7 @@ table {
 .mainReviews ul p {
     font-size: 20px;
     font-style: oblique;
-    font: message-box
+    font: message-box;
 }
 /**********************************************************/
 /*Estilos footer*/
@@ -336,7 +339,6 @@ table {
 @media screen and (min-width: 720px) {
     .mainAboutUs {
         display: grid;
-        height: 20vh;
         padding: 0.2rem;
         grid-template-areas: "mainAboutUsH2 mainAboutUsH2"
             "mainAboutUsImage mainAboutUsP";
@@ -366,7 +368,6 @@ table {
 @media screen and (min-width: 1360px) {
     .mainAboutUs {
         display: grid;
-        height: 20vh;
         padding: 0.2rem;
         grid-template-areas: "mainAboutUsH2 mainAboutUsH2"
             "mainAboutUsImage mainAboutUsP";
