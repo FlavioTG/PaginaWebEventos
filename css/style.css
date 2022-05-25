@@ -1,8 +1,8 @@
 /*reset*/
 * {
-    margin: 0;
+  /*  margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box;*/
 }
 
 /*Estilos del body*/
@@ -75,8 +75,8 @@ a {
 .menu {
     /*background: #42C2FF;*/
     background: linear-gradient(0deg, #42C2FF,#94bbe9);
-    border-radius: 0.5rem;
-    margin: 0.5rem;
+    border-radius: 1rem;
+    margin: 1rem;
 }
 
 .menu ul {
@@ -90,9 +90,9 @@ a {
     list-style-type: none;
     color: whitesmoke;
     font-size: 16px;
-    margin: 8px;
+    /*margin: 8px;*/
     position: relative;
-    padding: 5px;
+    /*padding: 5px;*/
 
 }
 .menu ul li:hover {
@@ -111,7 +111,7 @@ a {
 /*Estilos del sub menu*/
 .sub-menu {
     background-color: #42C2FF;
-    padding: 10px;
+    padding: 5px;
 }
 
 
