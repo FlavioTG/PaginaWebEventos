@@ -65,41 +65,34 @@
         </div>
     </nav>
 
-    
+
     <!--FORMULARIO-->
     <main class="mainContact">
         <form class="formulario">
             <fieldset>
                 <legend>Envio tus datos</legend>
-                <div>
-                    <label for="Nombre">
-                        Nombre y Apellido <br>
-                    </label>
-                    <input type="text" name="nombre" placeholder="Ingresa su nombre y apellido">
-                    <!--PLACEHOLDER Ayuda memoria-->
-                    <!--NOMBRE variable Ayuda memoria-->
+                <div class="mb-3">
+                    <label for="Nombre">Nombre y Apellido <br>
+                        <input class="form-control form-control-lg" type="text" name="nombre" placeholder="Nombre y apellido">
                 </div>
-                <!--etiqueta de bloque-->
-                <div>
-                    <!--etiqueta de bloque-->
-                    <label for="mail">
-                        Email: <br>
-                    </label>
-                    <input type="email" name="mail" placeholder="Ingrese su email">
-                    <!--type=email Pide si o si un email valido-->
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email:</label>
+                    <input class="form-control form-control-lg" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                 </div>
-                <div>
+                <div class="mb-3">
                     <label for="Telefono">
                         Telefono de contacto:<br>
                     </label>
-                    <input type="text" name="nombre" placeholder="Ingresa un teléfono">
+                    <input class="form-control form-control-lg" type="text" name="nombre" placeholder="Ingresa un teléfono">
                 </div>
                 <!--etiqueta de bloque-->
-                <label for="Consulta"> Consulta:<br>
-                    <textarea placeholder="Ingrese su consulta"></textarea>
-                </label> <br>
-    
-                <div>
+                <div class="mb-3">
+                    <label for="Consulta"> Consulta:<br>
+                        <textarea  class="form-control form-control-lg" placeholder="Ingrese su consulta"></textarea>
+                    </label> <br>
+                </div>
+                
+                <div class="mb-3">
                     <br>
                     <input type="submit" value="Enviar">
                     <input type="reset" value="Limpiar">
@@ -107,8 +100,9 @@
                 </div>
             </fieldset>
         </form>
+
     </main>
-    
+
     <!-- #region footer-->
     <footer class="footerInit">
         <div class="footerIcons">
