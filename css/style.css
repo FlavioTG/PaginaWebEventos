@@ -14,6 +14,7 @@ body {
     background-size: cover;
 }
 
+/*Contendor principal maquetado de la paginas*/
 .containerPrincipal{
     display: grid;
     height: 100vh;
@@ -24,6 +25,7 @@ body {
                          "main main main main"
                          "footer footer footer footer";
 }
+
 /* estilos del titulo principal */
 .headerInit {
     margin: 1rem;
@@ -109,7 +111,7 @@ a {
 .menu ul li {
     list-style-type: none;
     color: whitesmoke;
-    font-size: 16px;
+    font-size: 20px;
     position: relative;
 
 }
@@ -239,13 +241,11 @@ a {
 /**/
 .mainGalleryCarousel{
     grid-area: main;
-    margin: 1rem;
-    padding: 1rem;
-    display: block;
+    margin: 1.2rem;
 }
 .mainGallery {
     grid-area: main;
-    margin: 1rem;
+    margin: 1.2rem;
     display:inline-block;
     align-items: center;
     grid-template-areas: "imagen1"
@@ -257,15 +257,18 @@ a {
 }
 
 .item1 {
+    width: 100%;
     grid-area: imagen1;
-    overflow:hidden
+    border-radius: 2rem;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    transition: width 1s;
+
 }
 
-.item1:hover img{
+.item1:hover {
     width: 102%;
-    transform:scale(1.3);
-    /*transform: rotate(5deg);*/
-   
+    transform: rotate(5deg);
 }
 
 .item2 {
@@ -406,7 +409,6 @@ a {
         grid-template-areas: "imagen1 imagen2"
             "imagen3 imagen4";
         gap: 0.2rem;
-        margin: 1rem;
     }
     .mainGalleryCarousel{
         display: none;
@@ -439,7 +441,6 @@ a {
         display: grid;
         grid-template-areas: "imagen1 imagen2 imagen3 imagen4";
         gap: 0.2rem;
-        margin: 1rem;
     }
     .mainGalleryCarousel{
         display: none;
