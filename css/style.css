@@ -15,8 +15,8 @@ body {
 }
 
 .containerPrincipal{
-    
     display: grid;
+    height: 100vh;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 0.5fr 0.5fr 3fr 0.5fr;
     grid-template-areas: "header header header header"
@@ -142,7 +142,6 @@ a {
 .mainInit {
     grid-area: main;
     display: grid;
-    background-color: black;
     margin: 1rem;
     grid-template-areas: "mainInitVideo "
         "mainInitP";
@@ -168,9 +167,9 @@ a {
     grid-area: main;
     padding: 1rem;
     display: grid;
-    grid-template-areas: "eventKids"
-        "eventCorporative"
-        "eventCattering";
+    grid-template-areas: "eventKids eventKids"
+        "eventCorporative eventCorporative"
+        "eventCattering eventCattering";
     justify-content: center;
     justify-items: center;
     gap: 0.5rem;
@@ -238,30 +237,35 @@ a {
 /***********************************************************/
 /*Pagina Galeria Main*/
 /**/
+.mainGalleryCarousel{
+    grid-area: main;
+    margin: 1rem;
+    padding: 1rem;
+    display: block;
+}
 .mainGallery {
     grid-area: main;
-    padding: 1rem;
-    display: grid;
+    margin: 1rem;
+    display:inline-block;
+    align-items: center;
     grid-template-areas: "imagen1"
         "imagen2"
         "imagen3"
         "imagen4";
     gap: 0.2rem;
+    display: none;
 }
 
 .item1 {
-    width: 100%;
     grid-area: imagen1;
-    border-radius: 2rem;
-    margin: 0.5rem;
-    padding: 0.5rem;
-    transition: width 1s;
-
+    overflow:hidden
 }
 
-.item1:hover {
+.item1:hover img{
     width: 102%;
-    transform: rotate(5deg);
+    transform:scale(1.3);
+    /*transform: rotate(5deg);*/
+   
 }
 
 .item2 {
@@ -322,32 +326,26 @@ a {
     font-size: large;
 }
 
-table {
-    align-content: center;
-    width: fit-content;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 
 /***********************************************************/
 /*Pagina Reviews*/
 .mainReviews {
     grid-area: main;
-    text-align: center;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin: 1rem;
 }
 
 .mainReviews h2 {
     font-size: 20px;
     text-align: center;
-    margin: 10px;
 }
 
 .mainReviews ul li {
     list-style-type: none;
     font-size: 15px;
-    text-align: center;
+    
     font-style: italic;
 }
 
@@ -385,6 +383,7 @@ table {
         display: grid;
         padding: 0.2rem;
         grid-template-areas: "mainAboutUsH2 mainAboutUsH2"
+            "mainAboutUsImage mainAboutUsP"
             "mainAboutUsImage mainAboutUsP";
         justify-content: center;
         justify-items: center;
@@ -393,10 +392,11 @@ table {
     .mainServices {
         padding: 1rem;
         display: grid;
-        grid-template-areas: "eventKids eventCorporative"
-            "eventCattering eventCattering";
+        grid-template-areas: "eventKids eventCattering"
+            "eventCorporative eventCattering";
         justify-content: center;
         justify-items: center;
+        align-items: center;
         gap: 0.2rem;
     }
 
@@ -406,8 +406,11 @@ table {
         grid-template-areas: "imagen1 imagen2"
             "imagen3 imagen4";
         gap: 0.2rem;
+        margin: 1rem;
     }
-
+    .mainGalleryCarousel{
+        display: none;
+    }
 }
 
 @media screen and (min-width: 1360px) {
@@ -415,7 +418,9 @@ table {
         display: grid;
         padding: 0.2rem;
         grid-template-areas: "mainAboutUsH2 mainAboutUsH2"
+            "mainAboutUsImage mainAboutUsP"
             "mainAboutUsImage mainAboutUsP";
+
         justify-content: center;
         justify-items: center;
     }
@@ -434,6 +439,10 @@ table {
         display: grid;
         grid-template-areas: "imagen1 imagen2 imagen3 imagen4";
         gap: 0.2rem;
+        margin: 1rem;
+    }
+    .mainGalleryCarousel{
+        display: none;
     }
 
 
