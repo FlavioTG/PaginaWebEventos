@@ -329,6 +329,7 @@ a {
   text-decoration: none; }
 
 body {
-  background-image: url("../img/background-2.png");
+  background-image: url("../img/background2.png");
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover contain;
+  font-family: "Tahoma"; }

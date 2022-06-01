@@ -193,19 +193,19 @@
     margin: 1rem;
 
     h2 {
-        font-size: 20px;
+        font-size: $sizeFontReviews;
         text-align: center;
     }
 
     ul {
         li {
             list-style-type: none;
-            font-size: 15px;
+            font-size: $sizeFontReviewsLi;
             font-style: italic;
         }
 
         p {
-            font-size: 20px;
+            font-size: $sizeFontReviewsP;
             font-style: oblique;
             font: message-box;
         }
