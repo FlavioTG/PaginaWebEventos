@@ -1,0 +1,213 @@
+/*******************************************/
+/*Pagina Inicio */
+.mainInit {
+    grid-area: main;
+    display: grid;
+    margin: 1rem;
+    grid-template-areas: "mainInitVideo "
+        "mainInitP";
+    justify-content: center;
+    justify-items: center;
+}
+
+.mainInitP {
+    grid-area: mainInitP;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.mainInitVideo {
+    grid-area: mainInitVideo;
+    width: 40vh;
+    height: 40vh;
+
+}
+
+/*******************************************/
+/*Pagina Servicios Main*/
+.mainServices {
+    grid-area: main;
+    padding: 1rem;
+    display: grid;
+    grid-template-areas: "eventKids eventKids"
+        "eventCorporative eventCorporative"
+        "eventCattering eventCattering";
+    justify-content: center;
+    justify-items: center;
+    gap: 0.5rem;
+}
+
+.eventName {
+    text-align: center;
+    font: bolder;
+}
+
+.eventImage {
+    width: 100%;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 2rem;
+}
+
+.eventKids {
+    grid-area: eventKids;
+}
+
+.eventCorporative {
+    grid-area: eventCorporative;
+}
+
+.eventCattering {
+    grid-area: eventCattering;
+}
+
+/************************************************************/
+/*EPagina Sobre Nosotros*/
+/*Pagina Inicio */
+.mainAboutUs {
+    grid-area: main;
+    display: grid;
+    padding: 0.2rem;
+    grid-template-areas: "mainAboutUsH2"
+        "mainAboutUsImage"
+        "mainAboutUsP";
+    justify-content: center;
+    justify-items: center;
+}
+
+.mainAboutUsImage {
+    grid-area: mainAboutUsImage;
+    width: 100%;
+    margin: 0.2rem;
+    padding: 0.2rem;
+    border-radius: 2rem;
+}
+
+.mainAboutUsH2 {
+    grid-area: mainAboutUsH2;
+    font-size: 25px;
+    text-align: center;
+}
+
+.mainAboutUsP {
+    grid-area: mainAboutUsP;
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+/***********************************************************/
+/*Pagina Galeria Main*/
+/**/
+.mainGalleryCarousel {
+    grid-area: main;
+    margin: 1.2rem;
+}
+
+.mainGallery {
+    grid-area: main;
+    margin: 1.2rem;
+    display: inline-block;
+    align-items: center;
+    grid-template-areas: "imagen1"
+        "imagen2"
+        "imagen3"
+        "imagen4";
+    gap: 0.2rem;
+    display: none;
+}
+
+.item1 {
+    width: 100%;
+    grid-area: imagen1;
+    border-radius: 2rem;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    transition: width 1s;
+
+    &:hover {
+        width: 102%;
+        transform: rotate(5deg);
+    }
+}
+
+.item2 {
+    width: 100%;
+    grid-area: imagen2;
+    border-radius: 2rem;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    transition: width 1s;
+
+    &:hover {
+        width: 102%;
+        transform: rotate(-5deg);
+    }
+}
+
+
+
+.item3 {
+    width: 100%;
+    grid-area: imagen3;
+    border-radius: 2rem;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    transition: width 1s;
+
+    &:hover {
+        width: 102%;
+        transform: rotate(5deg);
+    }
+}
+
+.item3:hover {
+    width: 102%;
+    transform: rotate(5deg);
+}
+
+.item4 {
+    width: 100%;
+    grid-area: imagen4;
+    border-radius: 2rem;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    transition: width 1s;
+
+    &:hover {
+        width: 102%;
+        transform: rotate(-5deg);
+    }
+
+}
+
+
+
+/***********************************************************/
+/*Pagina Reviews*/
+.mainReviews {
+    grid-area: main;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin: 1rem;
+
+    h2 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    ul {
+        li {
+            list-style-type: none;
+            font-size: 15px;
+            font-style: italic;
+        }
+
+        p {
+            font-size: 20px;
+            font-style: oblique;
+            font: message-box;
+        }
+    }
+}

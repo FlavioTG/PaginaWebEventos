@@ -1,0 +1,15 @@
+/***********************************************************/
+/*Pagina Contacto*/
+/*Formulario*/
+.mainContact {
+    grid-area: main;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.formulario {
+    margin: 0.2rem;
+    padding: 0.2rem;
+    font-size: $formFontSize;
+}

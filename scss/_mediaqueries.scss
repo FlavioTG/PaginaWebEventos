@@ -1,0 +1,71 @@
+/**********************************************************/
+/*MEDIA QUERY*/
+@media screen and (min-width: 720px) {
+    .mainAboutUs {
+        display: grid;
+        padding: 0.2rem;
+        grid-template-areas: "mainAboutUsH2 mainAboutUsH2"
+            "mainAboutUsImage mainAboutUsP"
+            "mainAboutUsImage mainAboutUsP";
+        justify-content: center;
+        justify-items: center;
+    }
+
+    .mainServices {
+        padding: 1rem;
+        display: grid;
+        grid-template-areas: "eventKids eventCattering"
+            "eventCorporative eventCattering";
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        gap: 0.2rem;
+    }
+
+    .mainGallery {
+        padding: 1rem;
+        display: grid;
+        grid-template-areas: "imagen1 imagen2"
+            "imagen3 imagen4";
+        gap: 0.2rem;
+    }
+
+    .mainGalleryCarousel {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1360px) {
+    .mainAboutUs {
+        display: grid;
+        padding: 0.2rem;
+        grid-template-areas: "mainAboutUsH2 mainAboutUsH2 mainAboutUsH2"
+            "mainAboutUsImage mainAboutUsImage mainAboutUsP"
+            "mainAboutUsImage mainAboutUsImage mainAboutUsP";
+
+        justify-content: center;
+        justify-items: center;
+    }
+
+    .mainServices {
+        padding: 1rem;
+        display: grid;
+        grid-template-areas: "eventKids eventCorporative eventCattering";
+        justify-content: center;
+        justify-items: center;
+        gap: 0.2rem;
+    }
+
+    .mainGallery {
+        padding: 1rem;
+        display: grid;
+        grid-template-areas: "imagen1 imagen2 imagen3 imagen4";
+        gap: 0.2rem;
+    }
+
+    .mainGalleryCarousel {
+        display: none;
+    }
+
+
+}

@@ -1,0 +1,26 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@import "utilities/variables";
+@import "container";
+@import "header";
+@import "main";
+@import "menu";
+@import "contact";
+@import "footer";
+@import "mediaqueries";
+
+
+a {
+    /*LINKS o Hipervinculos*/
+    text-decoration: none;
+}
+
+body {
+    background-image: url('../img/background-2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}

@@ -1,0 +1,50 @@
+/***************************************************/
+/*MENU de todas las paginas*/
+.menu {
+    /*background: #42C2FF;*/
+    grid-area: nav;
+    background: linear-gradient($linearGradientMenu, $colorPrincipalMenu, $colorSecundarioMenu);
+    border-radius: 1rem;
+    margin: 1rem;
+    color: $colorPrincipalMenu;
+    font-size: $colorSecundarioMenu;
+
+    ul {
+        display: flex;
+        list-style-type: none;
+
+        li {
+            list-style-type: none;
+
+            position: relative;
+
+            &:hover {
+                color: $colorFontMenu;
+                font-weight: bold;
+            }
+
+            &:hover>ul {
+                display: block;
+            }
+        }
+
+        ul {
+            display: none;
+            position: absolute;
+        }
+    }
+}
+
+.navbar-nav.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+
+/*Estilos del sub menu*/
+.sub-menu {
+    background-color: $colorSubmenu;
+    padding: 5px;
+    text-align: center;
+}

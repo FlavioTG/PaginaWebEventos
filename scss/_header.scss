@@ -1,0 +1,52 @@
+/* estilos del titulo principal */
+.headerInit {
+    margin: 1rem;
+    padding: 1rem;
+    grid-area: header;
+}
+
+.headerLogo {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    background: radial-gradient(circle, $colorPrincipalLogo, $colorSecundarioLogo);
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: center;
+    animation-name: logoItemAction;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.headerLogoTitle {
+    color: honeydew;
+    font-size: $sizeFontLogo;
+    text-decoration: solid;
+}
+
+
+
+@keyframes logoItemAction {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(30deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    75% {
+        transform: rotate(-30deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
