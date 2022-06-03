@@ -22,6 +22,7 @@ a {
 body {
     background-image: url('../img/background2.png');
     background-repeat: no-repeat;
-    background-size: cover contain;
+    background-size: cover ;
+    background-repeat: repeat;
     font-family: $fuentePagina;
 }
