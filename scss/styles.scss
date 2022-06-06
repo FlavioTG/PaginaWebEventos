@@ -4,13 +4,13 @@
     box-sizing: border-box;
 }
 
-@import "utilities/variables";
+@import "base/variables";
 @import "container";
-@import "header";
+@import "components/header";
+@import "components/footer";
+@import "components/menu";
 @import "main";
-@import "menu";
 @import "contact";
-@import "footer";
 @import "mediaqueries";
 
 

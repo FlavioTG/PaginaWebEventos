@@ -48,6 +48,58 @@
   100% {
     transform: rotate(0deg); } }
 
+/**********************************************************/
+/*Estilos footer*/
+.footerInit {
+  grid-area: footer;
+  margin-bottom: 1rem;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 2rem;
+  background: linear-gradient(180deg, #42C2FF, #94bbe9);
+  text-align: end; }
+  .footerInit h3 {
+    font: bold;
+    font-size: small; }
+  .footerInit .footerIcons {
+    text-align: end; }
+
+/***************************************************/
+/*MENU de todas las paginas*/
+.menu {
+  /*background: #42C2FF;*/
+  grid-area: nav;
+  background: linear-gradient(0deg, #42C2FF, #94bbe9);
+  border-radius: 1rem;
+  margin: 1rem;
+  color: #42C2FF;
+  font-size: #94bbe9; }
+  .menu ul {
+    display: flex;
+    list-style-type: none; }
+    .menu ul li {
+      list-style-type: none;
+      position: relative; }
+      .menu ul li:hover {
+        color: whitesmoke;
+        font-weight: bold; }
+      .menu ul li:hover > ul {
+        display: block; }
+    .menu ul ul {
+      display: none;
+      position: absolute; }
+
+.navbar-nav.navbar-center {
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%); }
+
+/*Estilos del sub menu*/
+.sub-menu {
+  background-color: #42C2FF;
+  padding: 5px;
+  text-align: center; }
+
 /*******************************************/
 /*Pagina Inicio */
 .mainInit {
@@ -211,42 +263,6 @@
     font-style: oblique;
     font: message-box; }
 
-/***************************************************/
-/*MENU de todas las paginas*/
-.menu {
-  /*background: #42C2FF;*/
-  grid-area: nav;
-  background: linear-gradient(0deg, #42C2FF, #94bbe9);
-  border-radius: 1rem;
-  margin: 1rem;
-  color: #42C2FF;
-  font-size: #94bbe9; }
-  .menu ul {
-    display: flex;
-    list-style-type: none; }
-    .menu ul li {
-      list-style-type: none;
-      position: relative; }
-      .menu ul li:hover {
-        color: whitesmoke;
-        font-weight: bold; }
-      .menu ul li:hover > ul {
-        display: block; }
-    .menu ul ul {
-      display: none;
-      position: absolute; }
-
-.navbar-nav.navbar-center {
-  position: absolute;
-  left: 50%;
-  transform: translatex(-50%); }
-
-/*Estilos del sub menu*/
-.sub-menu {
-  background-color: #42C2FF;
-  padding: 5px;
-  text-align: center; }
-
 /***********************************************************/
 /*Pagina Contacto*/
 /*Formulario*/
@@ -260,22 +276,6 @@
   margin: 0.2rem;
   padding: 0.2rem;
   font-size: large; }
-
-/**********************************************************/
-/*Estilos footer*/
-.footerInit {
-  grid-area: footer;
-  margin-bottom: 1rem;
-  margin: 1rem;
-  padding: 1rem;
-  border-radius: 2rem;
-  background: linear-gradient(180deg, #42C2FF, #94bbe9);
-  text-align: end; }
-  .footerInit h3 {
-    font: bold;
-    font-size: small; }
-  .footerInit .footerIcons {
-    text-align: end; }
 
 /**********************************************************/
 /*MEDIA QUERY*/
