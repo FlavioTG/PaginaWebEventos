@@ -1,9 +1,7 @@
 /*******************************************/
 /*Pagina Inicio */
 .mainInit {
-    grid-area: main;
-    display: grid;
-    margin: 1rem;
+    @include grid-set (main,grid,1rem, 1rem);
     grid-template-areas: "mainInitVideo "
         "mainInitP";
     justify-content: center;
@@ -26,48 +24,39 @@
 /*******************************************/
 /*Pagina Servicios Main*/
 .mainServices {
-    grid-area: main;
-    padding: 1rem;
-    display: grid;
+    @include grid-set (main,grid,1rem, 1rem);
     grid-template-areas: "eventKids eventKids"
         "eventCorporative eventCorporative"
         "eventCattering eventCattering";
     justify-content: center;
     justify-items: center;
-    gap: 0.5rem;
 }
 
+.eventKids {
+    @include grid-set (eventKids,0,0.1rem,0.1rem);
+}
+
+.eventCorporative {
+    @include grid-set (eventCorporative,0,0.1rem,0.1rem);
+}
+
+.eventCattering {
+    @include grid-set (eventCattering,0,0.1rem,0.1rem);
+}
 .eventName {
     text-align: center;
-    font: bolder;
 }
-
 .eventImage {
     width: 100%;
     margin: 0.5rem;
     padding: 0.5rem;
     border-radius: 2rem;
 }
-
-.eventKids {
-    grid-area: eventKids;
-}
-
-.eventCorporative {
-    grid-area: eventCorporative;
-}
-
-.eventCattering {
-    grid-area: eventCattering;
-}
-
 /************************************************************/
 /*EPagina Sobre Nosotros*/
 /*Pagina Inicio */
 .mainAboutUs {
-    grid-area: main;
-    display: grid;
-    padding: 0.2rem;
+    @include grid-set (main,grid,0.2rem, 0.2rem);
     grid-template-areas: "mainAboutUsH2"
         "mainAboutUsImage"
         "mainAboutUsP";
@@ -76,45 +65,37 @@
 }
 
 .mainAboutUsImage {
-    grid-area: mainAboutUsImage;
-    width: 100%;
-    margin: 0.2rem;
-    padding: 0.2rem;
+    @include grid-set (mainAboutUsImage,0,1rem, 1rem);
+    width: auto;
     border-radius: 2rem;
 }
 
 .mainAboutUsH2 {
-    grid-area: mainAboutUsH2;
+    @include grid-set (mainAboutUsH2,0,0.5rem, 0.5rem);
     font-size: 25px;
     text-align: center;
 }
 
 .mainAboutUsP {
-    grid-area: mainAboutUsP;
+    @include grid-set (mainAboutUsP,0,0.5rem, 0.5rem);
     text-align: center;
-    font-size: 1rem;
-    margin-top: 10px;
 }
 
 /***********************************************************/
 /*Pagina Galeria Main*/
 /**/
 .mainGalleryCarousel {
-    grid-area: main;
-    margin: 1.2rem;
+    @include grid-set (main,0,1.2rem, 0.5rem);
 }
 
 .mainGallery {
-    grid-area: main;
-    margin: 1.2rem;
-    display: inline-block;
-    align-items: center;
+    @include grid-set (main,none,1.2rem, 0.5rem);
+/*    align-items: center;
     grid-template-areas: "imagen1"
         "imagen2"
         "imagen3"
         "imagen4";
-    gap: 0.2rem;
-    display: none;
+    gap: 0.2rem;*/
 }
 
 .item1 {

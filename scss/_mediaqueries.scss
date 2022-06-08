@@ -2,8 +2,7 @@
 /*MEDIA QUERY*/
 @media screen and (min-width: 720px) {
     .mainAboutUs {
-        display: grid;
-        padding: 0.2rem;
+        @include grid-set (main,grid,0.5rem, 0.5rem);
         grid-template-areas: "mainAboutUsH2 mainAboutUsH2"
             "mainAboutUsImage mainAboutUsP"
             "mainAboutUsImage mainAboutUsP";
@@ -12,19 +11,18 @@
     }
 
     .mainServices {
-        padding: 1rem;
-        display: grid;
+        @include grid-set (main,grid,0.5rem, 0.5rem);
         grid-template-areas: "eventKids eventCattering"
             "eventCorporative eventCattering";
         justify-content: center;
         justify-items: center;
         align-items: center;
-        gap: 0.2rem;
+        gap: 0.5rem;
     }
 
     .mainGallery {
-        padding: 1rem;
-        display: grid;
+        @include grid-set (main,grid,0.5rem, 0.5rem);
+        align-items: center;
         grid-template-areas: "imagen1 imagen2"
             "imagen3 imagen4";
         gap: 0.2rem;
@@ -37,22 +35,23 @@
 
 @media screen and (min-width: 1360px) {
     .mainAboutUs {
-        display: grid;
-        padding: 0.2rem;
+        @include grid-set (main,grid,1rem, 1rem);
         grid-template-areas: "mainAboutUsH2 mainAboutUsH2 mainAboutUsH2"
             "mainAboutUsImage mainAboutUsImage mainAboutUsP"
             "mainAboutUsImage mainAboutUsImage mainAboutUsP";
-
         justify-content: center;
         justify-items: center;
     }
 
     .mainServices {
-        padding: 1rem;
+        grid-area: main;
         display: grid;
+        padding: 1rem;
+        margin: 1rem;
         grid-template-areas: "eventKids eventCorporative eventCattering";
         justify-content: center;
         justify-items: center;
+        align-items: center;
         gap: 0.2rem;
     }
 

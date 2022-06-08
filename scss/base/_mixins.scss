@@ -1,0 +1,21 @@
+@mixin grid-set ($gridName, $display, $margin, $padding) {
+    grid-area: $gridName;
+    @if $display!=0 {
+        display: $display;    
+    } 
+    margin: $margin;
+    padding: $padding;
+}
+
+@mixin nombreMascota ($color, $alineado) {
+    color: $color;
+    text-align: $alineado;
+}
+
+/*@mixin flex ($flex, $direction, $content, $margin) {
+    
+    display: $flex;
+    flex-direction: $direction;
+    justify-content: $content;
+    margin-bottom: $margin;
+}*/

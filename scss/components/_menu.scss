@@ -12,10 +12,8 @@
     ul {
         display: flex;
         list-style-type: none;
-
         li {
             list-style-type: none;
-
             position: relative;
 
             &:hover {
@@ -35,12 +33,11 @@
     }
 }
 
-.navbar-nav.navbar-center {
+.navbar-nav .navbar-center {
     position: absolute;
     left: 50%;
     transform: translatex(-50%);
 }
-
 
 /*Estilos del sub menu*/
 .sub-menu {
