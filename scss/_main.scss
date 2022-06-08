@@ -1,7 +1,7 @@
 /*******************************************/
 /*Pagina Inicio */
 .mainInit {
-    @include grid-set (main,grid,1rem, 1rem);
+    @include grid-set (main, grid, 1rem, 1rem);
     grid-template-areas: "mainInitVideo"
         "mainInitP";
     align-content: center;
@@ -10,13 +10,13 @@
 }
 
 .mainInitP {
-    @include grid-set (mainInitP,0,0.2rem, 0.2rem);
+    @include grid-set (mainInitP, 0, 0.2rem, 0.2rem);
     text-align: center;
     font-size: 1rem;
 }
 
 .mainInitVideo {
-    @include grid-set (mainInitVideo,0,0.2rem, 0.2rem);
+    @include grid-set (mainInitVideo, 0, 0.2rem, 0.2rem);
     width: 100%;
     height: 40vh;
 }
@@ -24,39 +24,130 @@
 /*******************************************/
 /*Pagina Servicios Main*/
 .mainServices {
-    @include grid-set (main,grid,1rem, 1rem);
-    grid-template-areas: "eventKids eventKids"
-        "eventCorporative eventCorporative"
-        "eventCattering eventCattering";
-    justify-content: center;
-    justify-items: center;
+    @include grid-set (main, grid, 1rem, 1rem);
+    justify-content: center space-between;
+    align-items: center;
+    grid-row-gap: 30px;
 }
 
-.eventKids {
-    @include grid-set (eventKids,0,0.1rem,0.1rem);
+.eventCard {
+    display: flex;
+    transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
+    min-width: 200px;
+    min-height: 250px;
+    flex-direction: column;
+    border: 1px solid white;
+    border-radius: 2rem;
+    justify-content: end;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
 }
 
-.eventCorporative {
-    @include grid-set (eventCorporative,0,0.1rem,0.1rem);
+.eventCard:hover {
+    box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
+    transform: scale(1.10, 1.10);
 }
 
-.eventCattering {
-    @include grid-set (eventCattering,0,0.1rem,0.1rem);
+.eventCard :hover .card__img--hover {
+    height: 100%;
+    opacity: 0.3;
+}
+
+.eventInfo {
+    z-index: 2;
+    background-color: #fff;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    padding: 16px 24px 24px 24px;
+
 }
 .eventName {
+    color: #42C2FF;
+    text-align: center;
+    width: 100%;
+}
+p {
     text-align: center;
 }
+
+.eventCard:hover {
+    opacity: 1;
+}
+
+.eventCard:hover .eventImage--hover {
+    height: 100%;
+    opacity: 0.3;
+}
+
+.eventCard:hover .eventInfo {
+    background-color: transparent;
+    position: relative;
+}
+
+
+
+.eventKids .eventImage,
+.eventKids .eventImage--hover {
+    background-image: url('../img/kids.jpg');
+}
+
+.eventCorporative .eventImage,
+.eventCorporative .eventImage--hover {
+    background-image: url('../img/boda.jpg');
+}
+
+.eventCattering .eventImage,
+.eventCattering .eventImage--hover {
+    background-image: url('../img/catering.jpg');
+}
+
+.eventImage {
+    visibility: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 235px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.eventInfo-hover {
+    position: absolute;
+    padding: 16px;
+    width: 100%;
+    opacity: 0;
+    top: 0;
+}
+
+.eventImage--hover {
+    transition: 0.2s all ease-out;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    position: absolute;
+    height: 235px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    top: 0;
+}
+
+/*
+
 .eventImage {
     width: 100%;
     margin: 0.5rem;
     padding: 0.5rem;
     border-radius: 2rem;
-}
+    justify-self:  center;
+}*/
 /************************************************************/
 /*EPagina Sobre Nosotros*/
 /*Pagina Inicio */
 .mainAboutUs {
-    @include grid-set (main,grid,0.2rem, 0.2rem);
+    @include grid-set (main, grid, 0.2rem, 0.2rem);
     grid-template-areas: "mainAboutUsH2"
         "mainAboutUsImage"
         "mainAboutUsP";
@@ -65,19 +156,19 @@
 }
 
 .mainAboutUsImage {
-    @include grid-set (mainAboutUsImage,0,1rem, 1rem);
+    @include grid-set (mainAboutUsImage, 0, 1rem, 1rem);
     width: auto;
     border-radius: 2rem;
 }
 
 .mainAboutUsH2 {
-    @include grid-set (mainAboutUsH2,0,0.5rem, 0.5rem);
+    @include grid-set (mainAboutUsH2, 0, 0.5rem, 0.5rem);
     font-size: 25px;
     text-align: center;
 }
 
 .mainAboutUsP {
-    @include grid-set (mainAboutUsP,0,0.5rem, 0.5rem);
+    @include grid-set (mainAboutUsP, 0, 0.5rem, 0.5rem);
     text-align: center;
 }
 
@@ -85,15 +176,15 @@
 /*Pagina Galeria Main*/
 /**/
 .mainGalleryCarousel {
-    @include grid-set (main,0,1.2rem, 0.5rem);
+    @include grid-set (main, 0, 1.2rem, 0.5rem);
 }
 
 .mainGallery {
-    @include grid-set (main,none,1.2rem, 0.5rem);
+    @include grid-set (main, none, 1.2rem, 0.5rem);
 }
 
 .item1 {
-    @include grid-set (imagen1,0,0.5rem, 0.5rem);
+    @include grid-set (imagen1, 0, 0.5rem, 0.5rem);
     width: 100%;
     border-radius: 2rem;
     transition: width 1s;
@@ -105,7 +196,7 @@
 }
 
 .item2 {
-    @include grid-set (imagen2,0,0.5rem, 0.5rem);
+    @include grid-set (imagen2, 0, 0.5rem, 0.5rem);
     width: 100%;
     border-radius: 2rem;
     transition: width 1s;
@@ -119,7 +210,7 @@
 
 
 .item3 {
-    @include grid-set (imagen3,0,0.5rem, 0.5rem);
+    @include grid-set (imagen3, 0, 0.5rem, 0.5rem);
     width: 100%;
     border-radius: 2rem;
     transition: width 1s;
@@ -136,7 +227,7 @@
 }
 
 .item4 {
-    @include grid-set (imagen4,0,0.5rem, 0.5rem);
+    @include grid-set (imagen4, 0, 0.5rem, 0.5rem);
     width: 100%;
     border-radius: 2rem;
     transition: width 1s;
@@ -153,14 +244,16 @@
 /***********************************************************/
 /*Pagina Reviews*/
 .mainReviews {
-    @include grid-set (main,flex,1rem, 1rem);
+    @include grid-set (main, flex, 1rem, 1rem);
     align-content: center;
     justify-content: center;
     margin: 1rem;
+
     h2 {
         font-size: $sizeFontReviews;
         text-align: center;
     }
+
     ul {
         li {
             list-style-type: none;
@@ -175,4 +268,3 @@
         }
     }
 }
-

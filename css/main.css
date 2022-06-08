@@ -134,34 +134,107 @@
   display: grid;
   margin: 1rem;
   padding: 1rem;
-  grid-template-areas: "eventKids eventKids" "eventCorporative eventCorporative" "eventCattering eventCattering";
-  justify-content: center;
-  justify-items: center; }
+  justify-content: center space-between;
+  align-items: center;
+  grid-row-gap: 30px; }
 
-.eventKids {
-  grid-area: eventKids;
-  margin: 0.1rem;
-  padding: 0.1rem; }
+.eventCard {
+  display: flex;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+  min-width: 200px;
+  min-height: 250px;
+  flex-direction: column;
+  border: 1px solid white;
+  border-radius: 2rem;
+  justify-content: end;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1); }
 
-.eventCorporative {
-  grid-area: eventCorporative;
-  margin: 0.1rem;
-  padding: 0.1rem; }
+.eventCard:hover {
+  box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
+  transform: scale(1.1, 1.1); }
 
-.eventCattering {
-  grid-area: eventCattering;
-  margin: 0.1rem;
-  padding: 0.1rem; }
+.eventCard :hover .card__img--hover {
+  height: 100%;
+  opacity: 0.3; }
+
+.eventInfo {
+  z-index: 2;
+  background-color: #fff;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  padding: 16px 24px 24px 24px; }
 
 .eventName {
+  color: #42C2FF;
+  text-align: center;
+  width: 100%; }
+
+p {
   text-align: center; }
 
-.eventImage {
-  width: 100%;
-  margin: 0.5rem;
-  padding: 0.5rem;
-  border-radius: 2rem; }
+.eventCard:hover {
+  opacity: 1; }
 
+.eventCard:hover .eventImage--hover {
+  height: 100%;
+  opacity: 0.3; }
+
+.eventCard:hover .eventInfo {
+  background-color: transparent;
+  position: relative; }
+
+.eventKids .eventImage,
+.eventKids .eventImage--hover {
+  background-image: url("../img/kids.jpg"); }
+
+.eventCorporative .eventImage,
+.eventCorporative .eventImage--hover {
+  background-image: url("../img/boda.jpg"); }
+
+.eventCattering .eventImage,
+.eventCattering .eventImage--hover {
+  background-image: url("../img/catering.jpg"); }
+
+.eventImage {
+  visibility: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 235px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px; }
+
+.eventInfo-hover {
+  position: absolute;
+  padding: 16px;
+  width: 100%;
+  opacity: 0;
+  top: 0; }
+
+.eventImage--hover {
+  transition: 0.2s all ease-out;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  position: absolute;
+  height: 235px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  top: 0; }
+
+/*
+
+.eventImage {
+    width: 100%;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 2rem;
+    justify-self:  center;
+}*/
 /************************************************************/
 /*EPagina Sobre Nosotros*/
 /*Pagina Inicio */
@@ -304,13 +377,14 @@
   .mainServices {
     grid-area: main;
     display: grid;
-    margin: 0.5rem;
-    padding: 0.5rem;
-    grid-template-areas: "eventKids eventCattering" "eventCorporative eventCattering";
-    justify-content: center;
-    justify-items: center;
+    margin: 1rem;
+    padding: 1rem;
+    grid-template-columns: 3fr 3fr;
+    grid-template-rows: 3fr 3fr;
+    justify-content: center space-between;
     align-items: center;
-    gap: 0.5rem; }
+    grid-row-gap: 30px;
+    grid-column-gap: 30px; }
   .mainGallery {
     grid-area: main;
     display: grid;
@@ -336,11 +410,12 @@
     display: grid;
     margin: 1rem;
     padding: 1rem;
-    grid-template-areas: "eventKids eventCorporative eventCattering";
-    justify-content: center;
-    justify-items: center;
+    grid-template-columns: 3fr 3fr 3fr 3fr;
+    grid-template-rows: 3fr;
+    justify-content: center space-between;
     align-items: center;
-    gap: 0.2rem; }
+    grid-row-gap: 30px;
+    grid-column-gap: 30px; }
   .mainGallery {
     grid-area: main;
     display: grid;
