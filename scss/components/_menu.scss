@@ -3,7 +3,9 @@
 .menu {
     /*background: #42C2FF;*/
     @include grid-set (nav,0,1rem, 1rem);
-    background: linear-gradient($linearGradientMenu, $colorPrincipalMenu, $colorSecundarioMenu);
+    $colorPriMenu: map-get($colorMenu,principal);
+    $colorSecMenu: map-get($colorMenu,secundario);
+    background: linear-gradient($linearGradientFooter, $colorPriMenu, $colorSecMenu);
     border-radius: 1rem;
     color: $colorPrincipalMenu;
     font-size: $colorSecundarioMenu;

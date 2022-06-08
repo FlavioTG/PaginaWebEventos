@@ -3,13 +3,6 @@
   margin: 0;
   box-sizing: border-box; }
 
-/*@mixin flex ($flex, $direction, $content, $margin) {
-    
-    display: $flex;
-    flex-direction: $direction;
-    justify-content: $content;
-    margin-bottom: $margin;
-}*/
 .containerPrincipal {
   display: grid;
   height: 100vh;
@@ -20,9 +13,9 @@
 
 /* estilos del titulo principal */
 .headerInit {
+  grid-area: header;
   margin: 1rem;
-  padding: 1rem;
-  grid-area: header; }
+  padding: 1rem; }
 
 .headerLogo {
   width: 8rem;
@@ -60,7 +53,6 @@
 /*Estilos footer*/
 .footerInit {
   grid-area: footer;
-  margin-bottom: 1rem;
   margin: 1rem;
   padding: 1rem;
   border-radius: 2rem;
@@ -77,9 +69,10 @@
 .menu {
   /*background: #42C2FF;*/
   grid-area: nav;
-  background: linear-gradient(0deg, #42C2FF, #94bbe9);
-  border-radius: 1rem;
   margin: 1rem;
+  padding: 1rem;
+  background: linear-gradient(180deg, #42C2FF, #94bbe9);
+  border-radius: 1rem;
   color: #42C2FF;
   font-size: #94bbe9; }
   .menu ul {
@@ -115,18 +108,23 @@
   display: grid;
   margin: 1rem;
   padding: 1rem;
-  grid-template-areas: "mainInitVideo " "mainInitP";
+  grid-template-areas: "mainInitVideo" "mainInitP";
+  align-content: center;
   justify-content: center;
   justify-items: center; }
 
 .mainInitP {
   grid-area: mainInitP;
+  margin: 0.2rem;
+  padding: 0.2rem;
   text-align: center;
   font-size: 1rem; }
 
 .mainInitVideo {
   grid-area: mainInitVideo;
-  width: 40vh;
+  margin: 0.2rem;
+  padding: 0.2rem;
+  width: 100%;
   height: 40vh; }
 
 /*******************************************/
@@ -261,6 +259,8 @@
 .mainReviews {
   grid-area: main;
   display: flex;
+  margin: 1rem;
+  padding: 1rem;
   align-content: center;
   justify-content: center;
   margin: 1rem; }

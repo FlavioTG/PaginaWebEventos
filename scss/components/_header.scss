@@ -1,16 +1,15 @@
 /* estilos del titulo principal */
 .headerInit {
-    
-    margin: 1rem;
-    padding: 1rem;
-    grid-area: header;
+    @include grid-set (header,0,1rem, 1rem);
 }
 
 .headerLogo {
     width: 8rem;
     height: 8rem;
     border-radius: 50%;
-    background: radial-gradient(circle, $colorPrincipalLogo, $colorSecundarioLogo);
+    $colorPriLogo: map-get($colorLogo,principal);
+    $colorSecLogo: map-get($colorLogo,secundario);
+    background: radial-gradient(circle, $colorPriLogo, $colorSecLogo);
     margin: 0 auto;
     display: flex;
     justify-content: center;
