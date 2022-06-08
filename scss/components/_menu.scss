@@ -2,10 +2,9 @@
 /*MENU de todas las paginas*/
 .menu {
     /*background: #42C2FF;*/
-    grid-area: nav;
+    @include grid-set (nav,0,1rem, 1rem);
     background: linear-gradient($linearGradientMenu, $colorPrincipalMenu, $colorSecundarioMenu);
     border-radius: 1rem;
-    margin: 1rem;
     color: $colorPrincipalMenu;
     font-size: $colorSecundarioMenu;
 

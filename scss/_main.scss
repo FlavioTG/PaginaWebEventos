@@ -9,16 +9,15 @@
 }
 
 .mainInitP {
-    grid-area: mainInitP;
+    @include grid-set (mainInitP,0,1rem, 1rem);
     text-align: center;
     font-size: 1rem;
 }
 
 .mainInitVideo {
-    grid-area: mainInitVideo;
+    @include grid-set (mainInitVideo,grid,1rem, 1rem);
     width: 40vh;
     height: 40vh;
-
 }
 
 /*******************************************/
@@ -153,8 +152,7 @@
 /***********************************************************/
 /*Pagina Reviews*/
 .mainReviews {
-    grid-area: main;
-    display: flex;
+    @include grid-set (main,flex,1rem, 1rem);
     align-content: center;
     justify-content: center;
     margin: 1rem;
