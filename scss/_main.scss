@@ -90,20 +90,12 @@
 
 .mainGallery {
     @include grid-set (main,none,1.2rem, 0.5rem);
-/*    align-items: center;
-    grid-template-areas: "imagen1"
-        "imagen2"
-        "imagen3"
-        "imagen4";
-    gap: 0.2rem;*/
 }
 
 .item1 {
+    @include grid-set (imagen1,0,0.5rem, 0.5rem);
     width: 100%;
-    grid-area: imagen1;
     border-radius: 2rem;
-    margin: 0.5rem;
-    padding: 0.5rem;
     transition: width 1s;
 
     &:hover {
@@ -113,11 +105,9 @@
 }
 
 .item2 {
+    @include grid-set (imagen2,0,0.5rem, 0.5rem);
     width: 100%;
-    grid-area: imagen2;
     border-radius: 2rem;
-    margin: 0.5rem;
-    padding: 0.5rem;
     transition: width 1s;
 
     &:hover {
@@ -129,11 +119,9 @@
 
 
 .item3 {
+    @include grid-set (imagen3,0,0.5rem, 0.5rem);
     width: 100%;
-    grid-area: imagen3;
     border-radius: 2rem;
-    margin: 0.5rem;
-    padding: 0.5rem;
     transition: width 1s;
 
     &:hover {
@@ -148,11 +136,9 @@
 }
 
 .item4 {
+    @include grid-set (imagen4,0,0.5rem, 0.5rem);
     width: 100%;
-    grid-area: imagen4;
     border-radius: 2rem;
-    margin: 0.5rem;
-    padding: 0.5rem;
     transition: width 1s;
 
     &:hover {

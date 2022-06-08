@@ -206,44 +206,36 @@
 
 .mainGallery {
   grid-area: main;
-  display: none;
-  margin: 1.2rem;
-  padding: 0.5rem;
-  /*    align-items: center;
-    grid-template-areas: "imagen1"
-        "imagen2"
-        "imagen3"
-        "imagen4";
-    gap: 0.2rem;*/ }
+  display: none; }
 
 .item1 {
-  width: 100%;
   grid-area: imagen1;
-  border-radius: 2rem;
   margin: 0.5rem;
   padding: 0.5rem;
+  width: 100%;
+  border-radius: 2rem;
   transition: width 1s; }
   .item1:hover {
     width: 102%;
     transform: rotate(5deg); }
 
 .item2 {
-  width: 100%;
   grid-area: imagen2;
-  border-radius: 2rem;
   margin: 0.5rem;
   padding: 0.5rem;
+  width: 100%;
+  border-radius: 2rem;
   transition: width 1s; }
   .item2:hover {
     width: 102%;
     transform: rotate(-5deg); }
 
 .item3 {
-  width: 100%;
   grid-area: imagen3;
-  border-radius: 2rem;
   margin: 0.5rem;
   padding: 0.5rem;
+  width: 100%;
+  border-radius: 2rem;
   transition: width 1s; }
   .item3:hover {
     width: 102%;
@@ -254,11 +246,11 @@
   transform: rotate(5deg); }
 
 .item4 {
-  width: 100%;
   grid-area: imagen4;
-  border-radius: 2rem;
   margin: 0.5rem;
   padding: 0.5rem;
+  width: 100%;
+  border-radius: 2rem;
   transition: width 1s; }
   .item4:hover {
     width: 102%;
@@ -342,16 +334,18 @@
   .mainServices {
     grid-area: main;
     display: grid;
-    padding: 1rem;
     margin: 1rem;
+    padding: 1rem;
     grid-template-areas: "eventKids eventCorporative eventCattering";
     justify-content: center;
     justify-items: center;
     align-items: center;
     gap: 0.2rem; }
   .mainGallery {
-    padding: 1rem;
+    grid-area: main;
     display: grid;
+    margin: 1rem;
+    padding: 1rem;
     grid-template-areas: "imagen1 imagen2 imagen3 imagen4";
     gap: 0.2rem; }
   .mainGalleryCarousel {

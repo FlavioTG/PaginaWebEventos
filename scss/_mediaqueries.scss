@@ -44,10 +44,7 @@
     }
 
     .mainServices {
-        grid-area: main;
-        display: grid;
-        padding: 1rem;
-        margin: 1rem;
+        @include grid-set (main,grid,1rem, 1rem);
         grid-template-areas: "eventKids eventCorporative eventCattering";
         justify-content: center;
         justify-items: center;
@@ -56,8 +53,7 @@
     }
 
     .mainGallery {
-        padding: 1rem;
-        display: grid;
+        @include grid-set (main,grid,1rem, 1rem);
         grid-template-areas: "imagen1 imagen2 imagen3 imagen4";
         gap: 0.2rem;
     }
@@ -65,6 +61,4 @@
     .mainGalleryCarousel {
         display: none;
     }
-
-
 }

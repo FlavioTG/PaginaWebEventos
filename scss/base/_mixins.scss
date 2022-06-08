@@ -3,13 +3,10 @@
     @if $display!=0 {
         display: $display;    
     } 
-    margin: $margin;
-    padding: $padding;
-}
-
-@mixin nombreMascota ($color, $alineado) {
-    color: $color;
-    text-align: $alineado;
+    @if $display!=none {
+        margin: $margin;
+        padding: $padding;
+    }
 }
 
 /*@mixin flex ($flex, $direction, $content, $margin) {
