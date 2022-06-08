@@ -1,10 +1,7 @@
 /**********************************************************/
 /*Estilos footer*/
 .footerInit {
-    grid-area: footer;
-    margin-bottom: 1rem;
-    margin: 1rem;
-    padding: 1rem;
+    @include grid-set (footer,0,1rem, 1rem);
     border-radius: 2rem;
     background: linear-gradient($linearGradientFooter, $colorPrincipalMenu, $colorSecundarioMenu);
     text-align: end;
