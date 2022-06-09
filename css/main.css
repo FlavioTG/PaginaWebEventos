@@ -191,11 +191,15 @@ p {
 
 .eventCorporative .eventImage,
 .eventCorporative .eventImage--hover {
-  background-image: url("../img/boda.jpg"); }
+  background-image: url("../img/corporativo.jpg"); }
 
 .eventCattering .eventImage,
 .eventCattering .eventImage--hover {
   background-image: url("../img/catering.jpg"); }
+
+.eventBodas .eventImage,
+.eventBodas .eventImage--hover {
+  background-image: url("../img/boda.jpg"); }
 
 .eventImage {
   visibility: hidden;
