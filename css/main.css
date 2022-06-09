@@ -156,12 +156,70 @@
 .eventName {
   text-align: center; }
 
-.eventImage {
-  width: 100%;
-  margin: 0.5rem;
-  padding: 0.5rem;
-  border-radius: 2rem; }
+.eventCard:hover {
+  opacity: 1; }
 
+.eventCard:hover .eventImage--hover {
+  height: 100%;
+  opacity: 0.3; }
+
+.eventCard:hover .eventInfo {
+  background-color: transparent;
+  position: relative; }
+
+.eventKids .eventImage,
+.eventKids .eventImage--hover {
+  background-image: url("../img/kids.jpg"); }
+
+.eventCorporative .eventImage,
+.eventCorporative .eventImage--hover {
+  background-image: url("../img/corporativo.jpg"); }
+
+.eventCattering .eventImage,
+.eventCattering .eventImage--hover {
+  background-image: url("../img/catering.jpg"); }
+
+.eventBodas .eventImage,
+.eventBodas .eventImage--hover {
+  background-image: url("../img/boda.jpg"); }
+
+.eventImage {
+  visibility: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 235px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px; }
+
+.eventInfo-hover {
+  position: absolute;
+  padding: 16px;
+  width: 100%;
+  opacity: 0;
+  top: 0; }
+
+.eventImage--hover {
+  transition: 0.2s all ease-out;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  position: absolute;
+  height: 235px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  top: 0; }
+
+/*
+
+.eventImage {
+    width: 100%;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 2rem;
+}
 /************************************************************/
 /*EPagina Sobre Nosotros*/
 /*Pagina Inicio */
