@@ -1,7 +1,7 @@
 /*******************************************/
 /*Pagina Inicio */
 .mainInit {
-    @include grid-set (main,grid,1rem, 1rem);
+    @include grid-set (main, grid, 1rem, 1rem);
     grid-template-areas: "mainInitVideo"
         "mainInitP";
     align-content: center;
@@ -10,13 +10,13 @@
 }
 
 .mainInitP {
-    @include grid-set (mainInitP,0,0.2rem, 0.2rem);
+    @include grid-set (mainInitP, 0, 0.2rem, 0.2rem);
     text-align: center;
     font-size: 1rem;
 }
 
 .mainInitVideo {
-    @include grid-set (mainInitVideo,0,0.2rem, 0.2rem);
+    @include grid-set (mainInitVideo, 0, 0.2rem, 0.2rem);
     width: 100%;
     height: 40vh;
 }
@@ -138,7 +138,6 @@ p {
     top: 0;
 }
 
-
 /*
 
 .eventImage {
@@ -146,12 +145,13 @@ p {
     margin: 0.5rem;
     padding: 0.5rem;
     border-radius: 2rem;
-}
+    justify-self:  center;
+}*/
 /************************************************************/
 /*EPagina Sobre Nosotros*/
 /*Pagina Inicio */
 .mainAboutUs {
-    @include grid-set (main,grid,0.2rem, 0.2rem);
+    @include grid-set (main, grid, 0.2rem, 0.2rem);
     grid-template-areas: "mainAboutUsH2"
         "mainAboutUsImage"
         "mainAboutUsP";
@@ -160,19 +160,19 @@ p {
 }
 
 .mainAboutUsImage {
-    @include grid-set (mainAboutUsImage,0,1rem, 1rem);
+    @include grid-set (mainAboutUsImage, 0, 1rem, 1rem);
     width: auto;
     border-radius: 2rem;
 }
 
 .mainAboutUsH2 {
-    @include grid-set (mainAboutUsH2,0,0.5rem, 0.5rem);
+    @include grid-set (mainAboutUsH2, 0, 0.5rem, 0.5rem);
     font-size: 25px;
     text-align: center;
 }
 
 .mainAboutUsP {
-    @include grid-set (mainAboutUsP,0,0.5rem, 0.5rem);
+    @include grid-set (mainAboutUsP, 0, 0.5rem, 0.5rem);
     text-align: center;
 }
 
@@ -180,15 +180,15 @@ p {
 /*Pagina Galeria Main*/
 /**/
 .mainGalleryCarousel {
-    @include grid-set (main,0,1.2rem, 0.5rem);
+    @include grid-set (main, 0, 1.2rem, 0.5rem);
 }
 
 .mainGallery {
-    @include grid-set (main,none,1.2rem, 0.5rem);
+    @include grid-set (main, none, 1.2rem, 0.5rem);
 }
 
 .item1 {
-    @include grid-set (imagen1,0,0.5rem, 0.5rem);
+    @include grid-set (imagen1, 0, 0.5rem, 0.5rem);
     width: 100%;
     border-radius: 2rem;
     transition: width 1s;
@@ -200,7 +200,7 @@ p {
 }
 
 .item2 {
-    @include grid-set (imagen2,0,0.5rem, 0.5rem);
+    @include grid-set (imagen2, 0, 0.5rem, 0.5rem);
     width: 100%;
     border-radius: 2rem;
     transition: width 1s;
@@ -214,7 +214,7 @@ p {
 
 
 .item3 {
-    @include grid-set (imagen3,0,0.5rem, 0.5rem);
+    @include grid-set (imagen3, 0, 0.5rem, 0.5rem);
     width: 100%;
     border-radius: 2rem;
     transition: width 1s;
@@ -231,7 +231,7 @@ p {
 }
 
 .item4 {
-    @include grid-set (imagen4,0,0.5rem, 0.5rem);
+    @include grid-set (imagen4, 0, 0.5rem, 0.5rem);
     width: 100%;
     border-radius: 2rem;
     transition: width 1s;
@@ -248,14 +248,16 @@ p {
 /***********************************************************/
 /*Pagina Reviews*/
 .mainReviews {
-    @include grid-set (main,flex,1rem, 1rem);
+    @include grid-set (main, flex, 1rem, 1rem);
     align-content: center;
     justify-content: center;
     margin: 1rem;
+
     h2 {
         font-size: $sizeFontReviews;
         text-align: center;
     }
+
     ul {
         li {
             list-style-type: none;
@@ -270,4 +272,3 @@ p {
         }
     }
 }
-

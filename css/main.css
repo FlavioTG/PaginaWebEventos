@@ -237,7 +237,8 @@ p {
     margin: 0.5rem;
     padding: 0.5rem;
     border-radius: 2rem;
-}
+    justify-self:  center;
+}*/
 /************************************************************/
 /*EPagina Sobre Nosotros*/
 /*Pagina Inicio */
@@ -380,13 +381,14 @@ p {
   .mainServices {
     grid-area: main;
     display: grid;
-    margin: 0.5rem;
-    padding: 0.5rem;
-    grid-template-areas: "eventKids eventCattering" "eventCorporative eventCattering";
-    justify-content: center;
-    justify-items: center;
+    margin: 1rem;
+    padding: 1rem;
+    grid-template-columns: 3fr 3fr;
+    grid-template-rows: 3fr 3fr;
+    justify-content: center space-between;
     align-items: center;
-    gap: 0.5rem; }
+    grid-row-gap: 30px;
+    grid-column-gap: 30px; }
   .mainGallery {
     grid-area: main;
     display: grid;
@@ -412,11 +414,12 @@ p {
     display: grid;
     margin: 1rem;
     padding: 1rem;
-    grid-template-areas: "eventKids eventCorporative eventCattering";
-    justify-content: center;
-    justify-items: center;
+    grid-template-columns: 3fr 3fr 3fr 3fr;
+    grid-template-rows: 3fr;
+    justify-content: center space-between;
     align-items: center;
-    gap: 0.2rem; }
+    grid-row-gap: 30px;
+    grid-column-gap: 30px; }
   .mainGallery {
     grid-area: main;
     display: grid;
