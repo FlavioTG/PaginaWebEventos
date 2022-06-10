@@ -159,11 +159,6 @@ p {
 .mainGallery {
     @include grid-set (main, none, 1.2rem, 0.5rem);
 }
-
-.item1 {
-    @include grid-set (imagen1, 0, 0.5rem, 0.5rem);
-    @include gallery-item (90%,100%,rotate(5deg),black,width 1s);
-}
 .itemImage {
     width: 100%;
     border-radius: 2rem;
@@ -172,6 +167,11 @@ p {
 }
 .itemInfo{
     text-align: center;
+}
+
+.item1 {
+    @include grid-set (imagen1, 0, 0.5rem, 0.5rem);
+    @include gallery-item (90%,100%,rotate(5deg),black,width 1s);
 }
 
 .item2 {
@@ -188,7 +188,22 @@ p {
     @include grid-set (imagen4, 0, 0.5rem, 0.5rem);
     @include gallery-item (90%,100%,rotate(-5deg),black,width 1s);
 }
-
+.item5 {
+    @include grid-set (imagen5, 0, 0.5rem, 0.5rem);
+    @include gallery-item (90%,100%,rotate(-5deg),black,width 1s);
+}
+.item6 {
+    @include grid-set (imagen6, 0, 0.5rem, 0.5rem);
+    @include gallery-item (90%,100%,rotate(-5deg),black,width 1s);
+}
+.item7 {
+    @include grid-set (imagen7, 0, 0.5rem, 0.5rem);
+    @include gallery-item (90%,100%,rotate(-5deg),black,width 1s);
+}
+.item8 {
+    @include grid-set (imagen8, 0, 0.5rem, 0.5rem);
+    @include gallery-item (90%,100%,rotate(-5deg),black,width 1s);
+}
 
 
 /***********************************************************/
