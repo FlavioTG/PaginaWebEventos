@@ -195,7 +195,6 @@ p {
 .mainReviews {
     @include grid-set (main, flex, 1rem, 1rem);
     flex-direction: column;
-
     align-content: center;
     justify-content: center;
 
