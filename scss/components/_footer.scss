@@ -3,8 +3,8 @@
 .footerInit {
     @include grid-set (footer,0,1rem, 1rem);
     border-radius: 2rem;
-    $colorPriMenu: map-get($colorMenu,principal);
-    $colorSecMenu: map-get($colorMenu,secundario);
+    $colorSecMenu: map-get($colorMenu,principal);
+    $colorPriMenu: map-get($colorMenu,secundario);
     background: linear-gradient($linearGradientFooter, $colorPriMenu, $colorSecMenu);
     text-align: end;
     h3 {
@@ -15,4 +15,3 @@
         text-align: end;
     }
 }
-

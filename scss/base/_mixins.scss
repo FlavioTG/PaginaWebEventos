@@ -8,3 +8,16 @@
         padding: $padding;
     }
 }
+
+@mixin gallery-item ($widthIni,$widthFin, $transform, $color, $transition) {
+    width: $widthIni;
+    transform: $transform;
+    color: transparent;
+    transition: $transition;
+    &:hover {
+        transition: $transition;
+        width: $widthFin;
+        transform: rotate(0deg);
+        color: $color;
+    }  
+}

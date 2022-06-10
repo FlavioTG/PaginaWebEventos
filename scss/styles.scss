@@ -2,8 +2,10 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family:'Gill Sans';
 }
 
+@import "base/extend";
 @import "base/variables";
 @import "base/mixins";
 @import "base/map";
@@ -23,8 +25,7 @@ a {
 
 body {
     background-image: url('../img/background2.png');
-    background-repeat: no-repeat;
-    background-size: cover ;
+    background-size:initial ;
     background-repeat: repeat;
     font-family: $fuentePagina;
 }

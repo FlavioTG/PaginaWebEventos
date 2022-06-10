@@ -30,13 +30,20 @@
     grid-row-gap: 30px;
 }
 
+/*contendor :tarjeta de los eventos
+  Dentro de este
+    .eventImage .eventImage--hover
+    .eventInfo  .eventName
+  Al pasar con el mouse por encima de esta realiza un zoom
+*/
 .eventCard {
     display: flex;
     transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
+    background-color: $colorSecundarioMenu;
     min-width: 200px;
     min-height: 250px;
     flex-direction: column;
-    border: 1px solid white;
+    border: 2px solid white;
     border-radius: 2rem;
     justify-content: end;
     position: relative;
@@ -46,46 +53,23 @@
 
 .eventCard:hover {
     box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
-    transform: scale(1.10, 1.10);
-}
-
-.eventCard :hover .card__img--hover {
-    height: 100%;
-    opacity: 0.3;
+    transform: scale(1.05, 1.05);
 }
 
 .eventInfo {
-    z-index: 2;
-    background-color: #fff;
-    border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px;
-    padding: 16px 24px 24px 24px;
-
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
 }
+
 .eventName {
-    color: #42C2FF;
+    color: black;
     text-align: center;
     width: 100%;
 }
+
 p {
     text-align: center;
 }
-
-.eventCard:hover {
-    opacity: 1;
-}
-
-.eventCard:hover .eventImage--hover {
-    height: 100%;
-    opacity: 0.3;
-}
-
-.eventCard:hover .eventInfo {
-    background-color: transparent;
-    position: relative;
-}
-
-
 
 .eventKids .eventImage,
 .eventKids .eventImage--hover {
@@ -106,6 +90,7 @@ p {
 .eventBodas .eventImage--hover {
     background-image: url('../img/boda.jpg');
 }
+
 .eventImage {
     visibility: hidden;
     background-size: cover;
@@ -117,16 +102,8 @@ p {
     border-top-right-radius: 12px;
 }
 
-.eventInfo-hover {
-    position: absolute;
-    padding: 16px;
-    width: 100%;
-    opacity: 0;
-    top: 0;
-}
-
 .eventImage--hover {
-    transition: 0.2s all ease-out;
+    transition: 0.4s all ease-out;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -138,15 +115,11 @@ p {
     top: 0;
 }
 
-/*
+.eventCard:hover .eventImage--hover {
+    height: 100%;
+    opacity: 0.3;
+}
 
-.eventImage {
-    width: 100%;
-    margin: 0.5rem;
-    padding: 0.5rem;
-    border-radius: 2rem;
-    justify-self:  center;
-}*/
 /************************************************************/
 /*EPagina Sobre Nosotros*/
 /*Pagina Inicio */
@@ -185,62 +158,34 @@ p {
 
 .mainGallery {
     @include grid-set (main, none, 1.2rem, 0.5rem);
+    display: none
 }
 
 .item1 {
     @include grid-set (imagen1, 0, 0.5rem, 0.5rem);
+    @include gallery-item (90%,100%,rotate(5deg),black,width 1s);
+}
+.itemImage {
     width: 100%;
     border-radius: 2rem;
-    transition: width 1s;
-
-    &:hover {
-        width: 102%;
-        transform: rotate(5deg);
-    }
+}
+.itemInfo{
+    text-align: center;
 }
 
 .item2 {
     @include grid-set (imagen2, 0, 0.5rem, 0.5rem);
-    width: 100%;
-    border-radius: 2rem;
-    transition: width 1s;
-
-    &:hover {
-        width: 102%;
-        transform: rotate(-5deg);
-    }
+    @include gallery-item (90%,100%,rotate(-5deg),black,width 1s);
 }
-
-
 
 .item3 {
     @include grid-set (imagen3, 0, 0.5rem, 0.5rem);
-    width: 100%;
-    border-radius: 2rem;
-    transition: width 1s;
-
-    &:hover {
-        width: 102%;
-        transform: rotate(5deg);
-    }
-}
-
-.item3:hover {
-    width: 102%;
-    transform: rotate(5deg);
+    @include gallery-item (90%,100%,rotate(5deg),black,width 1s);
 }
 
 .item4 {
     @include grid-set (imagen4, 0, 0.5rem, 0.5rem);
-    width: 100%;
-    border-radius: 2rem;
-    transition: width 1s;
-
-    &:hover {
-        width: 102%;
-        transform: rotate(-5deg);
-    }
-
+    @include gallery-item (90%,100%,rotate(-5deg),black,width 1s);
 }
 
 
@@ -249,9 +194,10 @@ p {
 /*Pagina Reviews*/
 .mainReviews {
     @include grid-set (main, flex, 1rem, 1rem);
+    flex-direction: column;
+
     align-content: center;
     justify-content: center;
-    margin: 1rem;
 
     h2 {
         font-size: $sizeFontReviews;
@@ -263,6 +209,7 @@ p {
             list-style-type: none;
             font-size: $sizeFontReviewsLi;
             font-style: italic;
+            text-align: center;
         }
 
         p {
