@@ -263,7 +263,6 @@ p {
 
 .mainGallery {
   grid-area: main;
-  display: none;
   display: none; }
 
 .item1 {
@@ -282,7 +281,9 @@ p {
 
 .itemImage {
   width: 100%;
-  border-radius: 2rem; }
+  border-radius: 2rem;
+  border: 3px solid #94bbe9;
+  box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1); }
 
 .itemInfo {
   text-align: center; }
