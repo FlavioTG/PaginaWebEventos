@@ -1,24 +1,23 @@
 /***************************************************/
 /*MENU de todas las paginas*/
 .menu {
-    /*background: #42C2FF;*/
     @include grid-set (nav,0,1rem, 1rem);
     $colorPriMenu: map-get($colorMenu,principal);
     $colorSecMenu: map-get($colorMenu,secundario);
     background: linear-gradient($linearGradientFooter, $colorPriMenu, $colorSecMenu);
     border-radius: 1rem;
-    color: $colorPrincipalMenu;
-    font-size: $colorSecundarioMenu;
-
+    @extend .fontWeb;
+    color: $colorFontMenu;
+    font-size: $sizeFontMenu;
+    
     ul {
         display: flex;
         list-style-type: none;
         li {
             list-style-type: none;
             position: relative;
-
             &:hover {
-                color: $colorFontMenu;
+                color: $colorFontMenuHover;
                 font-weight: bold;
             }
 

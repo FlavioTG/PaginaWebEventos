@@ -1,7 +1,7 @@
 /*******************************************/
 /*Pagina Inicio */
 .mainInit {
-    @include grid-set (main,grid,1rem, 1rem);
+    @include grid-set (main, grid, 1rem, 1rem);
     grid-template-areas: "mainInitVideo"
         "mainInitP";
     align-content: center;
@@ -10,13 +10,13 @@
 }
 
 .mainInitP {
-    @include grid-set (mainInitP,0,0.2rem, 0.2rem);
+    @include grid-set (mainInitP, 0, 0.2rem, 0.2rem);
     text-align: center;
     font-size: 1rem;
 }
 
 .mainInitVideo {
-    @include grid-set (mainInitVideo,0,0.2rem, 0.2rem);
+    @include grid-set (mainInitVideo, 0, 0.2rem, 0.2rem);
     width: 100%;
     height: 40vh;
 }
@@ -24,44 +24,52 @@
 /*******************************************/
 /*Pagina Servicios Main*/
 .mainServices {
-    @include grid-set (main,grid,1rem, 1rem);
-    grid-template-areas: "eventKids eventKids"
-        "eventCorporative eventCorporative"
-        "eventCattering eventCattering";
-    justify-content: center;
-    justify-items: center;
+    @include grid-set (main, grid, 1rem, 1rem);
+    justify-content: center space-between;
+    align-items: center;
+    grid-row-gap: 30px;
 }
 
-.eventKids {
-    @include grid-set (eventKids,0,0.1rem,0.1rem);
-}
-
-.eventCorporative {
-    @include grid-set (eventCorporative,0,0.1rem,0.1rem);
-}
-
-.eventCattering {
-    @include grid-set (eventCattering,0,0.1rem,0.1rem);
-}
-.eventName {
-    text-align: center;
+/*contendor :tarjeta de los eventos
+  Dentro de este
+    .eventImage .eventImage--hover
+    .eventInfo  .eventName
+  Al pasar con el mouse por encima de esta realiza un zoom
+*/
+.eventCard {
+    display: flex;
+    transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
+    background-color: $colorSecundarioMenu;
+    min-width: 200px;
+    min-height: 250px;
+    flex-direction: column;
+    border: 2px solid white;
+    border-radius: 2rem;
+    justify-content: end;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
 }
 
 .eventCard:hover {
-    opacity: 1;
+    box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05, 1.05);
 }
 
-.eventCard:hover .eventImage--hover {
-    height: 100%;
-    opacity: 0.3;
+.eventInfo {
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
 }
 
-.eventCard:hover .eventInfo {
-    background-color: transparent;
-    position: relative;
+.eventName {
+    color: black;
+    text-align: center;
+    width: 100%;
 }
 
-
+p {
+    text-align: center;
+}
 
 .eventKids .eventImage,
 .eventKids .eventImage--hover {
@@ -82,6 +90,7 @@
 .eventBodas .eventImage--hover {
     background-image: url('../img/boda.jpg');
 }
+
 .eventImage {
     visibility: hidden;
     background-size: cover;
@@ -93,16 +102,8 @@
     border-top-right-radius: 12px;
 }
 
-.eventInfo-hover {
-    position: absolute;
-    padding: 16px;
-    width: 100%;
-    opacity: 0;
-    top: 0;
-}
-
 .eventImage--hover {
-    transition: 0.2s all ease-out;
+    transition: 0.4s all ease-out;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -114,19 +115,16 @@
     top: 0;
 }
 
-/*
-
-.eventImage {
-    width: 100%;
-    margin: 0.5rem;
-    padding: 0.5rem;
-    border-radius: 2rem;
+.eventCard:hover .eventImage--hover {
+    height: 100%;
+    opacity: 0.3;
 }
+
 /************************************************************/
 /*EPagina Sobre Nosotros*/
 /*Pagina Inicio */
 .mainAboutUs {
-    @include grid-set (main,grid,0.2rem, 0.2rem);
+    @include grid-set (main, grid, 0.2rem, 0.2rem);
     grid-template-areas: "mainAboutUsH2"
         "mainAboutUsImage"
         "mainAboutUsP";
@@ -135,19 +133,19 @@
 }
 
 .mainAboutUsImage {
-    @include grid-set (mainAboutUsImage,0,1rem, 1rem);
+    @include grid-set (mainAboutUsImage, 0, 1rem, 1rem);
     width: auto;
     border-radius: 2rem;
 }
 
 .mainAboutUsH2 {
-    @include grid-set (mainAboutUsH2,0,0.5rem, 0.5rem);
+    @include grid-set (mainAboutUsH2, 0, 0.5rem, 0.5rem);
     font-size: 25px;
     text-align: center;
 }
 
 .mainAboutUsP {
-    @include grid-set (mainAboutUsP,0,0.5rem, 0.5rem);
+    @include grid-set (mainAboutUsP, 0, 0.5rem, 0.5rem);
     text-align: center;
 }
 
@@ -155,67 +153,39 @@
 /*Pagina Galeria Main*/
 /**/
 .mainGalleryCarousel {
-    @include grid-set (main,0,1.2rem, 0.5rem);
+    @include grid-set (main, 0, 1.2rem, 0.5rem);
 }
 
 .mainGallery {
-    @include grid-set (main,none,1.2rem, 0.5rem);
+    @include grid-set (main, none, 1.2rem, 0.5rem);
+    display: none
 }
 
 .item1 {
-    @include grid-set (imagen1,0,0.5rem, 0.5rem);
+    @include grid-set (imagen1, 0, 0.5rem, 0.5rem);
+    @include gallery-item (90%,100%,rotate(5deg),black,width 1s);
+}
+.itemImage {
     width: 100%;
     border-radius: 2rem;
-    transition: width 1s;
-
-    &:hover {
-        width: 102%;
-        transform: rotate(5deg);
-    }
+}
+.itemInfo{
+    text-align: center;
 }
 
 .item2 {
-    @include grid-set (imagen2,0,0.5rem, 0.5rem);
-    width: 100%;
-    border-radius: 2rem;
-    transition: width 1s;
-
-    &:hover {
-        width: 102%;
-        transform: rotate(-5deg);
-    }
+    @include grid-set (imagen2, 0, 0.5rem, 0.5rem);
+    @include gallery-item (90%,100%,rotate(-5deg),black,width 1s);
 }
-
-
 
 .item3 {
-    @include grid-set (imagen3,0,0.5rem, 0.5rem);
-    width: 100%;
-    border-radius: 2rem;
-    transition: width 1s;
-
-    &:hover {
-        width: 102%;
-        transform: rotate(5deg);
-    }
-}
-
-.item3:hover {
-    width: 102%;
-    transform: rotate(5deg);
+    @include grid-set (imagen3, 0, 0.5rem, 0.5rem);
+    @include gallery-item (90%,100%,rotate(5deg),black,width 1s);
 }
 
 .item4 {
-    @include grid-set (imagen4,0,0.5rem, 0.5rem);
-    width: 100%;
-    border-radius: 2rem;
-    transition: width 1s;
-
-    &:hover {
-        width: 102%;
-        transform: rotate(-5deg);
-    }
-
+    @include grid-set (imagen4, 0, 0.5rem, 0.5rem);
+    @include gallery-item (90%,100%,rotate(-5deg),black,width 1s);
 }
 
 
@@ -223,19 +193,23 @@
 /***********************************************************/
 /*Pagina Reviews*/
 .mainReviews {
-    @include grid-set (main,flex,1rem, 1rem);
+    @include grid-set (main, flex, 1rem, 1rem);
+    flex-direction: column;
+
     align-content: center;
     justify-content: center;
-    margin: 1rem;
+
     h2 {
         font-size: $sizeFontReviews;
         text-align: center;
     }
+
     ul {
         li {
             list-style-type: none;
             font-size: $sizeFontReviewsLi;
             font-style: italic;
+            text-align: center;
         }
 
         p {
@@ -245,4 +219,3 @@
         }
     }
 }
-

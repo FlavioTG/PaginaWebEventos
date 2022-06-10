@@ -1,7 +1,13 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-family: 'Gill Sans'; }
+
+.fontWeb, .menu {
+  color: black;
+  font-style: normal;
+  font-family: 'Courier New', Courier, monospace; }
 
 .containerPrincipal {
   display: grid;
@@ -56,7 +62,7 @@
   margin: 1rem;
   padding: 1rem;
   border-radius: 2rem;
-  background: linear-gradient(180deg, #42C2FF, #94bbe9);
+  background: linear-gradient(180deg, #94bbe9, #42C2FF);
   text-align: end; }
   .footerInit h3 {
     font: bold;
@@ -67,14 +73,13 @@
 /***************************************************/
 /*MENU de todas las paginas*/
 .menu {
-  /*background: #42C2FF;*/
   grid-area: nav;
   margin: 1rem;
   padding: 1rem;
   background: linear-gradient(180deg, #42C2FF, #94bbe9);
   border-radius: 1rem;
-  color: #42C2FF;
-  font-size: #94bbe9; }
+  color: black;
+  font-size: 16px; }
   .menu ul {
     display: flex;
     list-style-type: none; }
@@ -134,38 +139,45 @@
   display: grid;
   margin: 1rem;
   padding: 1rem;
-  grid-template-areas: "eventKids eventKids" "eventCorporative eventCorporative" "eventCattering eventCattering";
-  justify-content: center;
-  justify-items: center; }
+  justify-content: center space-between;
+  align-items: center;
+  grid-row-gap: 30px; }
 
-.eventKids {
-  grid-area: eventKids;
-  margin: 0.1rem;
-  padding: 0.1rem; }
-
-.eventCorporative {
-  grid-area: eventCorporative;
-  margin: 0.1rem;
-  padding: 0.1rem; }
-
-.eventCattering {
-  grid-area: eventCattering;
-  margin: 0.1rem;
-  padding: 0.1rem; }
-
-.eventName {
-  text-align: center; }
+/*contendor :tarjeta de los eventos
+  Dentro de este
+    .eventImage .eventImage--hover
+    .eventInfo  .eventName
+  Al pasar con el mouse por encima de esta realiza un zoom
+*/
+.eventCard {
+  display: flex;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+  background-color: #94bbe9;
+  min-width: 200px;
+  min-height: 250px;
+  flex-direction: column;
+  border: 2px solid white;
+  border-radius: 2rem;
+  justify-content: end;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1); }
 
 .eventCard:hover {
-  opacity: 1; }
+  box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
+  transform: scale(1.05, 1.05); }
 
-.eventCard:hover .eventImage--hover {
-  height: 100%;
-  opacity: 0.3; }
+.eventInfo {
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem; }
 
-.eventCard:hover .eventInfo {
-  background-color: transparent;
-  position: relative; }
+.eventName {
+  color: black;
+  text-align: center;
+  width: 100%; }
+
+p {
+  text-align: center; }
 
 .eventKids .eventImage,
 .eventKids .eventImage--hover {
@@ -193,15 +205,8 @@
   border-top-left-radius: 12px;
   border-top-right-radius: 12px; }
 
-.eventInfo-hover {
-  position: absolute;
-  padding: 16px;
-  width: 100%;
-  opacity: 0;
-  top: 0; }
-
 .eventImage--hover {
-  transition: 0.2s all ease-out;
+  transition: 0.4s all ease-out;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -212,14 +217,10 @@
   border-top-right-radius: 12px;
   top: 0; }
 
-/*
+.eventCard:hover .eventImage--hover {
+  height: 100%;
+  opacity: 0.3; }
 
-.eventImage {
-    width: 100%;
-    margin: 0.5rem;
-    padding: 0.5rem;
-    border-radius: 2rem;
-}
 /************************************************************/
 /*EPagina Sobre Nosotros*/
 /*Pagina Inicio */
@@ -262,55 +263,71 @@
 
 .mainGallery {
   grid-area: main;
+  display: none;
   display: none; }
 
 .item1 {
   grid-area: imagen1;
   margin: 0.5rem;
   padding: 0.5rem;
-  width: 100%;
-  border-radius: 2rem;
+  width: 90%;
+  transform: rotate(5deg);
+  color: transparent;
   transition: width 1s; }
   .item1:hover {
-    width: 102%;
-    transform: rotate(5deg); }
+    transition: width 1s;
+    width: 100%;
+    transform: rotate(0deg);
+    color: black; }
+
+.itemImage {
+  width: 100%;
+  border-radius: 2rem; }
+
+.itemInfo {
+  text-align: center; }
 
 .item2 {
   grid-area: imagen2;
   margin: 0.5rem;
   padding: 0.5rem;
-  width: 100%;
-  border-radius: 2rem;
+  width: 90%;
+  transform: rotate(-5deg);
+  color: transparent;
   transition: width 1s; }
   .item2:hover {
-    width: 102%;
-    transform: rotate(-5deg); }
+    transition: width 1s;
+    width: 100%;
+    transform: rotate(0deg);
+    color: black; }
 
 .item3 {
   grid-area: imagen3;
   margin: 0.5rem;
   padding: 0.5rem;
-  width: 100%;
-  border-radius: 2rem;
+  width: 90%;
+  transform: rotate(5deg);
+  color: transparent;
   transition: width 1s; }
   .item3:hover {
-    width: 102%;
-    transform: rotate(5deg); }
-
-.item3:hover {
-  width: 102%;
-  transform: rotate(5deg); }
+    transition: width 1s;
+    width: 100%;
+    transform: rotate(0deg);
+    color: black; }
 
 .item4 {
   grid-area: imagen4;
   margin: 0.5rem;
   padding: 0.5rem;
-  width: 100%;
-  border-radius: 2rem;
+  width: 90%;
+  transform: rotate(-5deg);
+  color: transparent;
   transition: width 1s; }
   .item4:hover {
-    width: 102%;
-    transform: rotate(-5deg); }
+    transition: width 1s;
+    width: 100%;
+    transform: rotate(0deg);
+    color: black; }
 
 /***********************************************************/
 /*Pagina Reviews*/
@@ -319,16 +336,17 @@
   display: flex;
   margin: 1rem;
   padding: 1rem;
+  flex-direction: column;
   align-content: center;
-  justify-content: center;
-  margin: 1rem; }
+  justify-content: center; }
   .mainReviews h2 {
     font-size: 20px;
     text-align: center; }
   .mainReviews ul li {
     list-style-type: none;
     font-size: 15px;
-    font-style: italic; }
+    font-style: italic;
+    text-align: center; }
   .mainReviews ul p {
     font-size: 20px;
     font-style: oblique;
@@ -362,13 +380,14 @@
   .mainServices {
     grid-area: main;
     display: grid;
-    margin: 0.5rem;
-    padding: 0.5rem;
-    grid-template-areas: "eventKids eventCattering" "eventCorporative eventCattering";
-    justify-content: center;
-    justify-items: center;
+    margin: 1rem;
+    padding: 1rem;
+    grid-template-columns: 3fr 3fr;
+    grid-template-rows: 3fr 3fr;
+    justify-content: center space-between;
     align-items: center;
-    gap: 0.5rem; }
+    grid-row-gap: 30px;
+    grid-column-gap: 30px; }
   .mainGallery {
     grid-area: main;
     display: grid;
@@ -394,11 +413,12 @@
     display: grid;
     margin: 1rem;
     padding: 1rem;
-    grid-template-areas: "eventKids eventCorporative eventCattering";
-    justify-content: center;
-    justify-items: center;
+    grid-template-columns: 3fr 3fr 3fr 3fr;
+    grid-template-rows: 3fr;
+    justify-content: center space-between;
     align-items: center;
-    gap: 0.2rem; }
+    grid-row-gap: 30px;
+    grid-column-gap: 30px; }
   .mainGallery {
     grid-area: main;
     display: grid;
@@ -415,7 +435,6 @@ a {
 
 body {
   background-image: url("../img/background2.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-size: initial;
   background-repeat: repeat;
   font-family: "Tahoma"; }

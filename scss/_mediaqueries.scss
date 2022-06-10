@@ -11,13 +11,13 @@
     }
 
     .mainServices {
-        @include grid-set (main,grid,0.5rem, 0.5rem);
-        grid-template-areas: "eventKids eventCattering"
-            "eventCorporative eventCattering";
-        justify-content: center;
-        justify-items: center;
+        @include grid-set (main,grid,1rem, 1rem);
+        grid-template-columns: 3fr 3fr;
+        grid-template-rows: 3fr 3fr;
+        justify-content:center space-between;
         align-items: center;
-        gap: 0.5rem;
+        grid-row-gap: 30px;
+        grid-column-gap: 30px;
     }
 
     .mainGallery {
@@ -45,11 +45,12 @@
 
     .mainServices {
         @include grid-set (main,grid,1rem, 1rem);
-        grid-template-areas: "eventKids eventCorporative eventCattering";
-        justify-content: center;
-        justify-items: center;
+        grid-template-columns: 3fr 3fr 3fr 3fr;
+        grid-template-rows: 3fr;
+        justify-content:center space-between;
         align-items: center;
-        gap: 0.2rem;
+        grid-row-gap: 30px;
+        grid-column-gap: 30px;
     }
 
     .mainGallery {
