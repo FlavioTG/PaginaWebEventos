@@ -1,6 +1,9 @@
 /**********************************************************/
 /*MEDIA QUERY*/
 @media screen and (min-width: 720px) {
+    .menu{
+        font-size: 18px;    
+    }
     .mainAboutUs {
         @include grid-set (main,grid,0.5rem, 0.5rem);
         grid-template-areas: "mainAboutUsH2 mainAboutUsH2"
@@ -34,6 +37,9 @@
 }
 
 @media screen and (min-width: 1360px) {
+    .menu{
+        font-size: 20px;    
+    }
     .mainAboutUs {
         @include grid-set (main,grid,1rem, 1rem);
         grid-template-areas: "mainAboutUsH2 mainAboutUsH2 mainAboutUsH2"

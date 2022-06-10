@@ -2,7 +2,7 @@
 /*Pagina Contacto*/
 /*Formulario*/
 .mainContact {
-    @include grid-set (main, flex, 1rem, 1rem);
+    @include grid-set (main, 0, 1rem, 1rem);
     display: flex;
     align-content: center;
     justify-content: center;
