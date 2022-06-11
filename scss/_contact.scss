@@ -2,14 +2,52 @@
 /*Pagina Contacto*/
 /*Formulario*/
 .mainContact {
-    @include grid-set (main, 0, 1rem, 1rem);
-    display: flex;
+    @include grid-set (main, grid, 1rem, 1rem);
+    grid-template-areas: "formulario""infoContact";
     align-content: center;
     justify-content: center;
+    justify-items: center;
 }
 
+.infoContact{
+    @include grid-set (infoContact, 0, 0.2rem, 0.2rem);
+    font-size: 1rem;
+    .tituloRedes{
+        text-align: center;
+    }
+    .linksRedes{
+        display:flex;
+        flex-direction: row;
+        align-content: space-between;
+        justify-content: space-around;
+        border-color: $colorPrincipalLogo;
+        border: 1px solid;
+    }
+}
+.infoFormulario {
+    /*@include grid-set (formulario, 0, 0.2rem, 0.2rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;*/
+    color: blue;
+}
 .formulario {
     margin: 0.2rem;
     padding: 0.2rem;
-    font-size: $formFontSize;
+    font-size: $formFontSize;   
+}
+.botonForm{
+    @extend .sub-menu;
+    width: 35%;
+    text-align: center;
+	border-radius: 7px;
+	border-bottom-left-radius: 0;
+	transition: all 0.4s;
+  
+	&:hover {
+		border-radius: 10px;
+		color: $colorFontMenuHover;
+        background: $colorSecundarioLogo;
+	}
+
 }

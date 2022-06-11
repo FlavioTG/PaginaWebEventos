@@ -45,8 +45,7 @@
 
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="../pages/services.html" id="navbarDropdown"
-                                role="button" aria-expanded="false">
-                                Servicios
+                                role="button" aria-expanded="false">Servicios
                             </a>
                             <!---data-bs-toggle="dropdown"-->
                             <ul class="dropdown-menu sub-menu" aria-labelledby="navbarDropdown">
@@ -76,41 +75,61 @@
 
         <!--FORMULARIO-->
         <main class="mainContact">
-            <form class="formulario">
-                <fieldset>
-                    <legend>Envio tus datos</legend>
-                    <div class="mb-3">
-                        <label for="Nombre">Nombre y Apellido <br>
+            <!--Info de contacto + Forulario de Contacto-->
+            <div class="infoContact">
+                <h2 class="tituloRedes">Seguinos en nuestras redes sociales</h2>
+                <div class="linksRedes">
+                    <a href="https://gmail.com/" target="_blank">
+                        <img src="../img/icoEmail.svg" alt="Correo" width="24" height="24">
+                    </a>
+                    <a href="https://es-la.facebook.com/" target="_blank">
+                        <img src="../img/icoFacebook.svg" alt="Pagina de facebook" width="24" height="24">
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <img src="../img/icoInstagram.svg" alt="Pagina de instagram" width="24" height="24">
+                    </a>
+                    <a href="https://web.whatsapp.com/" target="_blank">
+                        <img src="../img/icoWhatsapp.svg" alt="Pagina de whatsapp" width="24" height="24">
+                    </a>
+                    <a href="https://twitter.com/?lang=es" target="_blank">
+                        <img src="../img/icoTwitter.svg" alt="Pagina de twitter" width="24" height="24">
+                    </a>
+                </div>
+            </div>
+            <div class="infoFormulario">
+                <h2 class="titleFormulario">¿Querés mas informacion?</h2>
+                <form class="formulario">
+                    <fieldset>
+                        <legend>Envio tus datos</legend>
+                        <div class="mb-3">
+                            <label for="Nombre">Nombre y Apellido
+                                <input class="form-control form-control-lg" type="text" name="nombre"
+                                    placeholder="Nombre y apellido">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email:</label>
+                            <input class="form-control form-control-lg" type="email" class="form-control"
+                                id="exampleInputEmail1" aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="Telefono">Telefono de contacto:
+                            </label>
                             <input class="form-control form-control-lg" type="text" name="nombre"
-                                placeholder="Nombre y apellido">
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Email:</label>
-                        <input class="form-control form-control-lg" type="email" class="form-control"
-                            id="exampleInputEmail1" aria-describedby="emailHelp">
-                    </div>
-                    <div class="mb-3">
-                        <label for="Telefono">
-                            Telefono de contacto:<br>
-                        </label>
-                        <input class="form-control form-control-lg" type="text" name="nombre"
-                            placeholder="Ingresa un teléfono">
-                    </div>
-                    <!--etiqueta de bloque-->
-                    <div class="mb-3">
-                        <label for="Consulta"> Consulta:<br>
-                            <textarea class="form-control form-control-lg" placeholder="Ingrese su consulta"></textarea>
-                        </label> <br>
-                    </div>
-
-                    <div class="mb-3">
-                        <br>
-                        <input type="submit" value="Enviar">
-                        <input type="reset" value="Limpiar">
-                        <!--etiqueta de bloque-->
-                    </div>
-                </fieldset>
-            </form>
+                                placeholder="Ingresa un teléfono">
+                        </div>
+                        <div class="mb-3">
+                            <label for="Consulta">Consulta:
+                                <textarea class="form-control form-control-lg"
+                                    placeholder="Ingrese su consulta"></textarea>
+                            </label>
+                        </div>
+                        <div class="mb-3">
+                            <input class="botonForm" type="submit" value="Enviar">
+                            <input class="botonForm" type="reset" value="Limpiar">
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
 
         </main>
 

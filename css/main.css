@@ -14,7 +14,7 @@
   height: 100vh;
   margin: 0.1rem;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 0.5fr 0.5fr 3fr 0.5fr;
+  grid-template-rows: 0.25fr 0.5fr 3fr 0.25fr;
   grid-template-areas: "header header header header" "nav nav nav nav" "main main main main" "footer footer footer footer"; }
 
 /* estilos del titulo principal */
@@ -79,7 +79,7 @@
   background: linear-gradient(180deg, #42C2FF, #94bbe9);
   border-radius: 1rem;
   color: black;
-  font-size: 16px; }
+  font-size: 18px; }
   .menu ul {
     display: flex;
     list-style-type: none; }
@@ -101,9 +101,11 @@
   transform: translatex(-50%); }
 
 /*Estilos del sub menu*/
-.sub-menu {
-  background-color: #42C2FF;
+.sub-menu, .botonForm {
+  background: linear-gradient(180deg, #94bbe9, #42C2FF);
   padding: 5px;
+  border-color: transparent;
+  border-width: 0px;
   text-align: center; }
 
 /*******************************************/
@@ -414,16 +416,51 @@ p {
 /*Formulario*/
 .mainContact {
   grid-area: main;
+  display: grid;
   margin: 1rem;
   padding: 1rem;
-  display: flex;
+  grid-template-areas: "formulario" "infoContact";
   align-content: center;
-  justify-content: center; }
+  justify-content: center;
+  justify-items: center; }
+
+.infoContact {
+  grid-area: infoContact;
+  margin: 0.2rem;
+  padding: 0.2rem;
+  font-size: 1rem; }
+  .infoContact .tituloRedes {
+    text-align: center; }
+  .infoContact .linksRedes {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    justify-content: space-around;
+    border-color: #6AA84F;
+    border: 1px solid; }
+
+.infoFormulario {
+  /*@include grid-set (formulario, 0, 0.2rem, 0.2rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;*/
+  color: blue; }
 
 .formulario {
   margin: 0.2rem;
   padding: 0.2rem;
   font-size: large; }
+
+.botonForm {
+  width: 35%;
+  text-align: center;
+  border-radius: 7px;
+  border-bottom-left-radius: 0;
+  transition: all 0.4s; }
+  .botonForm:hover {
+    border-radius: 10px;
+    color: whitesmoke;
+    background: #4AF873; }
 
 /**********************************************************/
 /*MEDIA QUERY*/

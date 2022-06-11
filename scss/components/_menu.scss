@@ -41,7 +41,11 @@
 
 /*Estilos del sub menu*/
 .sub-menu {
-    background-color: $colorSubmenu;
+    $colorSecMenu: map-get($colorMenu,principal);
+    $colorPriMenu: map-get($colorMenu,secundario);
+    background: linear-gradient($linearGradientFooter, $colorPriMenu, $colorSecMenu);
     padding: 5px;
+    border-color: transparent;
+    border-width: 0px;
     text-align: center;
 }
