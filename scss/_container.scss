@@ -1,7 +1,7 @@
 .containerPrincipal {
     display: grid;
     height: $containerHeight;
-    margin:0.1rem;
+    //margin:0.1rem;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 0.25fr 0.5fr 3fr 0.25fr;
     grid-template-areas:    "header header header header"

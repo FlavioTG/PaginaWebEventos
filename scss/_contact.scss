@@ -1,14 +1,14 @@
 /***********************************************************/
 /*Pagina Contacto*/
-/*Formulario*/
+
 .mainContact {
     @include grid-set (main, grid, 1rem, 1rem);
-    grid-template-areas: "formulario""infoContact";
+    grid-template-areas: "formulario""infoContact"
+    "formulario""infoContact";
     align-content: center;
     justify-content: center;
     justify-items: center;
 }
-
 .infoContact{
     @include grid-set (infoContact, 0, 0.2rem, 0.2rem);
     font-size: 1rem;
@@ -24,12 +24,12 @@
         border: 1px solid;
     }
 }
+/*Formulario*/
 .infoFormulario {
-    /*@include grid-set (formulario, 0, 0.2rem, 0.2rem);
+    @include grid-set (formulario, 0, 0.2rem, 0.2rem);
     display: flex;
     flex-direction: column;
-    align-items: center;*/
-    color: blue;
+    align-items: center;
 }
 .formulario {
     margin: 0.2rem;

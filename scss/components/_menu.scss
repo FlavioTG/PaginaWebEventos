@@ -17,7 +17,6 @@
             list-style-type: none;
             position: relative;
             &:hover {
-                color: $colorFontMenuHover;
                 font-weight: bold;
             }
 
@@ -25,7 +24,6 @@
                 display: block;
             }
         }
-
         ul {
             display: none;
             position: absolute;
