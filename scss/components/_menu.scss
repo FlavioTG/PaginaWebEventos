@@ -1,21 +1,23 @@
 /***************************************************/
 /*MENU de todas las paginas*/
 .menu {
-    @include grid-set (nav,0,1rem, 1rem);
-    $colorPriMenu: map-get($colorMenu,principal);
-    $colorSecMenu: map-get($colorMenu,secundario);
+    @include grid-set (nav, 0, 0.5rem, 0.5rem);
+    $colorPriMenu: map-get($colorMenu, principal);
+    $colorSecMenu: map-get($colorMenu, secundario);
     background: linear-gradient($linearGradientFooter, $colorPriMenu, $colorSecMenu);
+    //background: transparent;
     border-radius: 1rem;
     @extend .fontWeb;
     color: $colorFontMenu;
     font-size: $sizeFontMenu;
-    
+
     ul {
-        display: flex;
         list-style-type: none;
+
         li {
             list-style-type: none;
             position: relative;
+
             &:hover {
                 font-weight: bold;
             }
@@ -24,6 +26,7 @@
                 display: block;
             }
         }
+
         ul {
             display: none;
             position: absolute;
@@ -39,8 +42,8 @@
 
 /*Estilos del sub menu*/
 .sub-menu {
-    $colorSecMenu: map-get($colorMenu,principal);
-    $colorPriMenu: map-get($colorMenu,secundario);
+    $colorSecMenu: map-get($colorMenu, principal);
+    $colorPriMenu: map-get($colorMenu, secundario);
     background: linear-gradient($linearGradientFooter, $colorPriMenu, $colorSecMenu);
     padding: 5px;
     border-color: transparent;

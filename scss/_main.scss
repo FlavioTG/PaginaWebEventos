@@ -167,7 +167,12 @@ p {
 }
 .itemInfo{
     text-align: center;
+    background-color: transparent;
+    & :hover{
+        background-color: violet;
+    }
 }
+
 
 @for $i from 1 through $cantGalleryItems{
     @if $i%2 ==0{

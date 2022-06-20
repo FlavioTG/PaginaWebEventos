@@ -2,16 +2,20 @@
 /*Estilos footer*/
 .footerInit {
     @include grid-set (footer,0,1rem, 1rem);
-    border-radius: 2rem;
+    display: flex;
+    flex: row;
+    margin-bottom: 5px;
+    justify-content: space-between;
+    border-radius: 1rem;
     $colorSecMenu: map-get($colorMenu,principal);
     $colorPriMenu: map-get($colorMenu,secundario);
     background: linear-gradient($linearGradientFooter, $colorPriMenu, $colorSecMenu);
-    text-align: end;
-    h3 {
-        font: bold;
-        font-size: small;
-    }
     .footerIcons {
-        text-align: end;
+        align-content: end;
     }
+    h3 {
+            font: bold;
+            font-size: small;
+            text-align: end;
+        }
 }

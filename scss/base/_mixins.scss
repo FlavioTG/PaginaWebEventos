@@ -7,10 +7,6 @@
         margin: $margin;
         padding: $padding;
     }
-    .parent {
-        display: grid;
-        
-        }
 }
 
 @mixin gallery-item ($widthIni,$widthFin, $transform, $color, $transition) {
@@ -22,6 +18,6 @@
         transition: $transition;
         width: $widthFin;
         transform: rotate(0deg);
-        color: $color;
+        color: $color;       
     }  
 }

@@ -4,17 +4,17 @@
 }
 
 .headerLogo {
-    width: 8rem;
-    height: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //position: center;
+    width: 7rem;
+    height: 7rem;
     border-radius: 50%;
     $colorPriLogo: map-get($colorLogo,principal);
     $colorSecLogo: map-get($colorLogo,secundario);
     background: radial-gradient(circle, $colorPriLogo, $colorSecLogo);
     margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: center;
     animation-name: logoItemAction;
     animation-duration: 10s;
     animation-iteration-count: infinite;
@@ -22,7 +22,7 @@
 }
 
 .headerLogoTitle {
-    color: honeydew;
+    color: $colorFontLogo;
     font-size: $sizeFontLogo;
     text-decoration: solid;
 }

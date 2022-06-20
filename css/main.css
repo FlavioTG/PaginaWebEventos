@@ -9,11 +9,14 @@
   font-style: normal;
   font-family: 'Courier New', Courier, monospace; }
 
+/*$colorPrincipalLogo: #6AA84F;
+$colorSecundarioLogo: #4AF873;*/
 .containerPrincipal {
   display: grid;
   height: 100vh;
+  padding-bottom: 5px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 0.25fr 0.5fr 3fr 0.25fr;
+  grid-template-rows: 0.25fr 0.5fr 3fr 0.1fr;
   grid-template-areas: "header header header header" "nav nav nav nav" "main main main main" "footer footer footer footer"; }
 
 /* estilos del titulo principal */
@@ -21,26 +24,23 @@
   grid-area: header;
   margin: 1rem;
   padding: 1rem; }
-  .headerInit .parent {
-    display: grid; }
 
 .headerLogo {
-  width: 8rem;
-  height: 8rem;
-  border-radius: 50%;
-  background: radial-gradient(circle, #6AA84F, #4AF873);
-  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: center;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, #882D2Fff, #D1CAB8ff);
+  margin: 0 auto;
   animation-name: logoItemAction;
   animation-duration: 10s;
   animation-iteration-count: infinite;
   animation-timing-function: linear; }
 
 .headerLogoTitle {
-  color: honeydew;
+  color: black;
   font-size: 20px;
   text-decoration: solid; }
 
@@ -62,31 +62,30 @@
   grid-area: footer;
   margin: 1rem;
   padding: 1rem;
-  border-radius: 2rem;
-  background: linear-gradient(180deg, #94bbe9, #42C2FF);
-  text-align: end; }
-  .footerInit .parent {
-    display: grid; }
+  display: flex;
+  flex: row;
+  margin-bottom: 5px;
+  justify-content: space-between;
+  border-radius: 1rem;
+  background: linear-gradient(180deg, #94bbe9, #42C2FF); }
+  .footerInit .footerIcons {
+    align-content: end; }
   .footerInit h3 {
     font: bold;
-    font-size: small; }
-  .footerInit .footerIcons {
+    font-size: small;
     text-align: end; }
 
 /***************************************************/
 /*MENU de todas las paginas*/
 .menu {
   grid-area: nav;
-  margin: 1rem;
-  padding: 1rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
   background: linear-gradient(180deg, #42C2FF, #94bbe9);
   border-radius: 1rem;
   color: black;
   font-size: 18px; }
-  .menu .parent {
-    display: grid; }
   .menu ul {
-    display: flex;
     list-style-type: none; }
     .menu ul li {
       list-style-type: none;
@@ -123,8 +122,6 @@
   align-content: center;
   justify-content: center;
   justify-items: center; }
-  .mainInit .parent {
-    display: grid; }
 
 .mainInitP {
   grid-area: mainInitP;
@@ -132,8 +129,6 @@
   padding: 0.2rem;
   text-align: center;
   font-size: 1rem; }
-  .mainInitP .parent {
-    display: grid; }
 
 .mainInitVideo {
   grid-area: mainInitVideo;
@@ -141,8 +136,6 @@
   padding: 0.2rem;
   width: 100%;
   height: 40vh; }
-  .mainInitVideo .parent {
-    display: grid; }
 
 /*******************************************/
 /*Pagina Servicios Main*/
@@ -154,8 +147,6 @@
   justify-content: center space-between;
   align-items: center;
   grid-row-gap: 30px; }
-  .mainServices .parent {
-    display: grid; }
 
 /*contendor :tarjeta de los eventos
   Dentro de este
@@ -246,8 +237,6 @@ p {
   grid-template-areas: "mainAboutUsH2" "mainAboutUsImage" "mainAboutUsP";
   justify-content: center;
   justify-items: center; }
-  .mainAboutUs .parent {
-    display: grid; }
 
 .mainAboutUsImage {
   grid-area: mainAboutUsImage;
@@ -255,8 +244,6 @@ p {
   padding: 1rem;
   width: auto;
   border-radius: 2rem; }
-  .mainAboutUsImage .parent {
-    display: grid; }
 
 .mainAboutUsH2 {
   grid-area: mainAboutUsH2;
@@ -264,16 +251,12 @@ p {
   padding: 0.5rem;
   font-size: 25px;
   text-align: center; }
-  .mainAboutUsH2 .parent {
-    display: grid; }
 
 .mainAboutUsP {
   grid-area: mainAboutUsP;
   margin: 0.5rem;
   padding: 0.5rem;
   text-align: center; }
-  .mainAboutUsP .parent {
-    display: grid; }
 
 /***********************************************************/
 /*Pagina Galeria Main*/
@@ -282,14 +265,10 @@ p {
   grid-area: main;
   margin: 1.2rem;
   padding: 0.5rem; }
-  .mainGalleryCarousel .parent {
-    display: grid; }
 
 .mainGallery {
   grid-area: main;
   display: none; }
-  .mainGallery .parent {
-    display: grid; }
 
 .itemImage {
   width: 100%;
@@ -298,7 +277,10 @@ p {
   box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1); }
 
 .itemInfo {
-  text-align: center; }
+  text-align: center;
+  background-color: transparent; }
+  .itemInfo :hover {
+    background-color: violet; }
 
 .item1 {
   width: 90%;
@@ -398,10 +380,8 @@ p {
   flex-direction: column;
   align-content: center;
   justify-content: center; }
-  .mainReviews .parent {
-    display: grid; }
   .mainReviews h2 {
-    font-size: 20px;
+    font-size: 26px;
     text-align: center; }
   .mainReviews ul li {
     list-style-type: none;
@@ -424,16 +404,12 @@ p {
   align-content: center;
   justify-content: center;
   justify-items: center; }
-  .mainContact .parent {
-    display: grid; }
 
 .infoContact {
   grid-area: infoContact;
   margin: 0.2rem;
   padding: 0.2rem;
   font-size: 1rem; }
-  .infoContact .parent {
-    display: grid; }
   .infoContact .tituloRedes {
     text-align: center; }
   .infoContact .linksRedes {
@@ -441,7 +417,7 @@ p {
     flex-direction: row;
     align-content: space-between;
     justify-content: space-around;
-    border-color: #6AA84F;
+    border-color: #882D2Fff;
     border: 1px solid; }
 
 /*Formulario*/
@@ -452,8 +428,6 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center; }
-  .infoFormulario .parent {
-    display: grid; }
 
 .formulario {
   margin: 0.2rem;
@@ -469,7 +443,19 @@ p {
   .botonForm:hover {
     border-radius: 10px;
     color: whitesmoke;
-    background: #4AF873; }
+    background: #D1CAB8ff; }
+
+.botonFormMenu {
+  width: 20px;
+  text-align: center;
+  border-radius: 7px;
+  border-bottom-left-radius: 0;
+  transition: all 0.4s;
+  background: white; }
+  .botonFormMenu:hover {
+    border-radius: 10px;
+    color: black;
+    background: white; }
 
 /**********************************************************/
 /*MEDIA QUERY*/
@@ -485,8 +471,6 @@ p {
     align-content: center;
     justify-content: space-around;
     justify-items: center; }
-    .mainContact .parent {
-      display: grid; }
   .mainAboutUs {
     grid-area: main;
     display: grid;
@@ -495,8 +479,6 @@ p {
     grid-template-areas: "mainAboutUsH2 mainAboutUsH2" "mainAboutUsImage mainAboutUsP" "mainAboutUsImage mainAboutUsP";
     justify-content: center;
     justify-items: center; }
-    .mainAboutUs .parent {
-      display: grid; }
   .mainServices {
     grid-area: main;
     display: grid;
@@ -508,8 +490,6 @@ p {
     align-items: center;
     grid-row-gap: 30px;
     grid-column-gap: 30px; }
-    .mainServices .parent {
-      display: grid; }
   .mainGallery {
     grid-area: main;
     display: grid;
@@ -518,15 +498,7 @@ p {
     align-items: center;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    /*grid-template-areas: 
-            "imagen1 imagen2"
-            "imagen3 imagen4"
-            "imagen5 imagen6"
-            "imagen7 imagen8";
-            */
     gap: 0.2rem; }
-    .mainGallery .parent {
-      display: grid; }
   .mainGalleryCarousel {
     display: none; } }
 
@@ -543,8 +515,6 @@ p {
     align-content: center;
     justify-content: space-around;
     justify-items: center; }
-    .mainContact .parent {
-      display: grid; }
   .mainAboutUs {
     grid-area: main;
     display: grid;
@@ -553,8 +523,6 @@ p {
     grid-template-areas: "mainAboutUsH2 mainAboutUsH2 mainAboutUsH2" "mainAboutUsImage mainAboutUsImage mainAboutUsP" "mainAboutUsImage mainAboutUsImage mainAboutUsP";
     justify-content: center;
     justify-items: center; }
-    .mainAboutUs .parent {
-      display: grid; }
   .mainServices {
     grid-area: main;
     display: grid;
@@ -566,8 +534,6 @@ p {
     align-items: center;
     grid-row-gap: 30px;
     grid-column-gap: 30px; }
-    .mainServices .parent {
-      display: grid; }
   .mainGallery {
     grid-area: main;
     display: grid;
@@ -575,11 +541,7 @@ p {
     padding: 1rem;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    /*grid-template-areas: "imagen1 imagen2 imagen3 imagen4"
-        "imagen5 imagen6 imagen7 imagen8";*/
     gap: 0.2rem; }
-    .mainGallery .parent {
-      display: grid; }
   .mainGalleryCarousel {
     display: none; } }
 
@@ -588,7 +550,8 @@ a {
   text-decoration: none; }
 
 body {
-  background-image: url("../img/background2.png");
+  background-image: url("../img/background3.png");
+  background-color: white;
   background-size: initial;
   background-repeat: repeat;
   font-family: "Tahoma"; }
