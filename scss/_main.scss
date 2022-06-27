@@ -124,7 +124,7 @@ p {
 /*EPagina Sobre Nosotros*/
 /*Pagina Inicio */
 .mainAboutUs {
-    @include grid-set (main, grid, 0.2rem, 0.2rem);
+    @include grid-set (main, grid, 1rem, 1rem);
     grid-template-areas: "mainAboutUsH2"
         "mainAboutUsImage"
         "mainAboutUsP";
@@ -133,20 +133,22 @@ p {
 }
 
 .mainAboutUsImage {
-    @include grid-set (mainAboutUsImage, 0, 1rem, 1rem);
-    width: auto;
+    @include grid-set (mainAboutUsImage, 0, 0.5rem, 0.5rem);
+    width: 100%;
+    align-self: center;
     border-radius: 2rem;
 }
 
 .mainAboutUsH2 {
     @include grid-set (mainAboutUsH2, 0, 0.5rem, 0.5rem);
-    font-size: 25px;
+    font-size: $sizeFontH2;
     text-align: center;
 }
 
 .mainAboutUsP {
     @include grid-set (mainAboutUsP, 0, 0.5rem, 0.5rem);
     text-align: center;
+    font-size: $sizeFontP;
 }
 
 /***********************************************************/
@@ -178,12 +180,12 @@ p {
     @if $i%2 ==0{
         .item#{$i}{
             //@include grid-set (imagen#{$i}, 0, 0.5rem, 0.5rem);
-            @include gallery-item (90%,100%,rotate(5deg),black,width 1s);    
+            @include gallery-item (90%,100%,rotate(3deg),black,width 1s);    
         }
     }@else{
         .item#{$i}{
             //@include grid-set (imagen#{$i}, 0, 0.5rem, 0.5rem);
-            @include gallery-item (90%,100%,rotate(-5deg),black,width 1s);    
+            @include gallery-item (90%,100%,rotate(-3deg),black,width 1s);    
         }
     }
 }

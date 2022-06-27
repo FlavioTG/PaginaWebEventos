@@ -9,8 +9,7 @@
   font-style: normal;
   font-family: 'Courier New', Courier, monospace; }
 
-/*$colorPrincipalLogo: #6AA84F;
-$colorSecundarioLogo: #4AF873;*/
+/* SCSS HEX */
 .containerPrincipal {
   display: grid;
   height: 100vh;
@@ -32,7 +31,7 @@ $colorSecundarioLogo: #4AF873;*/
   width: 7rem;
   height: 7rem;
   border-radius: 50%;
-  background: radial-gradient(circle, #882D2Fff, #D1CAB8ff);
+  background: radial-gradient(circle, #6AA84F, #4AF873);
   margin: 0 auto;
   animation-name: logoItemAction;
   animation-duration: 10s;
@@ -232,17 +231,18 @@ p {
 .mainAboutUs {
   grid-area: main;
   display: grid;
-  margin: 0.2rem;
-  padding: 0.2rem;
+  margin: 1rem;
+  padding: 1rem;
   grid-template-areas: "mainAboutUsH2" "mainAboutUsImage" "mainAboutUsP";
   justify-content: center;
   justify-items: center; }
 
 .mainAboutUsImage {
   grid-area: mainAboutUsImage;
-  margin: 1rem;
-  padding: 1rem;
-  width: auto;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  width: 100%;
+  align-self: center;
   border-radius: 2rem; }
 
 .mainAboutUsH2 {
@@ -256,7 +256,8 @@ p {
   grid-area: mainAboutUsP;
   margin: 0.5rem;
   padding: 0.5rem;
-  text-align: center; }
+  text-align: center;
+  font-size: 12px; }
 
 /***********************************************************/
 /*Pagina Galeria Main*/
@@ -284,7 +285,7 @@ p {
 
 .item1 {
   width: 90%;
-  transform: rotate(-5deg);
+  transform: rotate(-3deg);
   color: transparent;
   transition: width 1s; }
   .item1:hover {
@@ -295,7 +296,7 @@ p {
 
 .item2 {
   width: 90%;
-  transform: rotate(5deg);
+  transform: rotate(3deg);
   color: transparent;
   transition: width 1s; }
   .item2:hover {
@@ -306,7 +307,7 @@ p {
 
 .item3 {
   width: 90%;
-  transform: rotate(-5deg);
+  transform: rotate(-3deg);
   color: transparent;
   transition: width 1s; }
   .item3:hover {
@@ -317,7 +318,7 @@ p {
 
 .item4 {
   width: 90%;
-  transform: rotate(5deg);
+  transform: rotate(3deg);
   color: transparent;
   transition: width 1s; }
   .item4:hover {
@@ -328,7 +329,7 @@ p {
 
 .item5 {
   width: 90%;
-  transform: rotate(-5deg);
+  transform: rotate(-3deg);
   color: transparent;
   transition: width 1s; }
   .item5:hover {
@@ -339,7 +340,7 @@ p {
 
 .item6 {
   width: 90%;
-  transform: rotate(5deg);
+  transform: rotate(3deg);
   color: transparent;
   transition: width 1s; }
   .item6:hover {
@@ -350,7 +351,7 @@ p {
 
 .item7 {
   width: 90%;
-  transform: rotate(-5deg);
+  transform: rotate(-3deg);
   color: transparent;
   transition: width 1s; }
   .item7:hover {
@@ -361,7 +362,7 @@ p {
 
 .item8 {
   width: 90%;
-  transform: rotate(5deg);
+  transform: rotate(3deg);
   color: transparent;
   transition: width 1s; }
   .item8:hover {
@@ -400,16 +401,16 @@ p {
   display: grid;
   margin: 1rem;
   padding: 1rem;
-  grid-template-areas: "formulario" "infoContact" "formulario" "infoContact";
+  grid-template-areas: "formulario" "infoContact";
   align-content: center;
   justify-content: center;
   justify-items: center; }
 
 .infoContact {
   grid-area: infoContact;
-  margin: 0.2rem;
-  padding: 0.2rem;
-  font-size: 1rem; }
+  margin: 1rem;
+  padding: 1rem;
+  font-size: 20px; }
   .infoContact .tituloRedes {
     text-align: center; }
   .infoContact .linksRedes {
@@ -417,8 +418,7 @@ p {
     flex-direction: row;
     align-content: space-between;
     justify-content: space-around;
-    border-color: #882D2Fff;
-    border: 1px solid; }
+    padding: 5px; }
 
 /*Formulario*/
 .infoFormulario {
@@ -427,11 +427,18 @@ p {
   padding: 0.2rem;
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  width: 100%; }
 
+/*.titleFormulario{
+    font-size: $sizeFontH2;
+}
+.tituloRedes{
+    @extend .titleFormulario;
+}*/
 .formulario {
-  margin: 0.2rem;
-  padding: 0.2rem;
+  margin: 1rem;
+  padding: 1rem;
   font-size: large; }
 
 .botonForm {
@@ -443,20 +450,22 @@ p {
   .botonForm:hover {
     border-radius: 10px;
     color: whitesmoke;
-    background: #D1CAB8ff; }
+    background: #4AF873; }
 
-.botonFormMenu {
-  width: 20px;
-  text-align: center;
-  border-radius: 7px;
-  border-bottom-left-radius: 0;
-  transition: all 0.4s;
-  background: white; }
-  .botonFormMenu:hover {
-    border-radius: 10px;
-    color: black;
-    background: white; }
-
+/*
+.botonFormMenu{
+    width: 20px;
+    text-align: center;
+	border-radius: 7px;
+	border-bottom-left-radius: 0;
+	transition: all 0.4s;
+    background: white;
+	&:hover {
+		border-radius: 10px;
+		color: black;
+        background: white;
+	}
+}*/
 /**********************************************************/
 /*MEDIA QUERY*/
 @media screen and (min-width: 720px) {
@@ -493,9 +502,11 @@ p {
   .mainGallery {
     grid-area: main;
     display: grid;
-    margin: 0.5rem;
+    margin: 1.2rem;
     padding: 0.5rem;
-    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+    justify-items: center;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr);
     gap: 0.2rem; }
@@ -537,11 +548,14 @@ p {
   .mainGallery {
     grid-area: main;
     display: grid;
-    margin: 1rem;
-    padding: 1rem;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 0.2rem; }
+    margin: 1.2rem;
+    padding: 0.5rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2.66667, 1fr);
+    gap: 0.2rem;
+    align-content: center;
+    justify-content: space-around;
+    justify-items: center; }
   .mainGalleryCarousel {
     display: none; } }
 

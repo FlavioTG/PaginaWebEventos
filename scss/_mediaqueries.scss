@@ -1,8 +1,9 @@
 /**********************************************************/
 /*MEDIA QUERY*/
+
 @media screen and (min-width: $widthTablet) {
     .menu{
-        font-size: 18px;    
+        font-size:  $widthTabletFont;    
     }
 
     .mainContact {
@@ -34,8 +35,10 @@
     }
 
     .mainGallery {
-        @include grid-set (main,grid,0.5rem, 0.5rem);
-        align-items: center;
+        @include grid-set (main,grid,1.2rem, 0.5rem);
+        align-content: center;
+        justify-content: space-around;
+        justify-items: center;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat($cantGalleryItems/2, 1fr);
         gap: 0.2rem;
@@ -48,7 +51,7 @@
 
 @media screen and (min-width: $widthHD1360) {
     .menu{
-        font-size: 20px;    
+        font-size: $widthHD1360Font;    
     }
     .mainContact {
         @include grid-set (main, grid, 1rem, 1rem);
@@ -78,10 +81,13 @@
     }
 
     .mainGallery {
-        @include grid-set (main,grid,1rem, 1rem);
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat($cantGalleryItems/4, 1fr);
+        @include grid-set (main,grid,1.2rem, 0.5rem);
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat($cantGalleryItems/3, 1fr);
         gap: 0.2rem;
+        align-content: center;
+        justify-content: space-around;
+        justify-items: center;
     }
 
     .mainGalleryCarousel {

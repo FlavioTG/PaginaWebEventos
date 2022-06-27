@@ -1,12 +1,19 @@
 //Paleta de colores
-/*$colorPrincipalLogo: #6AA84F;
-$colorSecundarioLogo: #4AF873;*/
+$colorPrincipalLogo: #6AA84F;
+$colorSecundarioLogo: #4AF873;
 
 //Header
-$colorPrincipalLogo: #882D2Fff;
-$colorSecundarioLogo:#D1CAB8ff;
+//$colorPrincipalLogo: #882D2Fff;
+//$colorSecundarioLogo:#D1CAB8ff;
 $sizeFontLogo:20px;
 $colorFontLogo:black;
+$sizeFontH1: 30px;
+$sizeFontH2: 25px;
+$sizeFontH3: 20px;
+$sizeFontH4: 18px;
+$sizeFontH5: 15px;
+$sizeFontH6: 12px;
+$sizeFontP: 12px;
 
 //Menu
 $colorPrincipalMenu: #42C2FF;
@@ -36,7 +43,17 @@ $sizeFontReviewsP:20px;
 $sizeFontReviewsLi:15px;
 
 //Mediaquerys
+
 $widthTablet: 720px;
 $widthHD1360: 1360px;
 $cantGalleryItems: 8;
+$widthTabletFont: 18px;
+$widthHD1360Font: 20px;
 
+//
+/* SCSS HEX */
+$oxford-blue: #00072dff;
+$royal-blue-dark: #001c55ff;
+$royal-blue-dark-2: #0a2472ff;
+$honolulu-blue: #0e6ba8ff;
+$non-photo-blue: #a6e1faff;

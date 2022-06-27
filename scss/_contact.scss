@@ -3,15 +3,15 @@
 
 .mainContact {
     @include grid-set (main, grid, 1rem, 1rem);
-    grid-template-areas: "formulario""infoContact"
-    "formulario""infoContact";
+    grid-template-areas:"formulario"
+                        "infoContact";
     align-content: center;
     justify-content: center;
     justify-items: center;
 }
 .infoContact{
-    @include grid-set (infoContact, 0, 0.2rem, 0.2rem);
-    font-size: 1rem;
+    @include grid-set (infoContact, 0, 1rem, 1rem);
+    font-size: $sizeFontH3;
     .tituloRedes{
         text-align: center;
     }
@@ -20,8 +20,7 @@
         flex-direction: row;
         align-content: space-between;
         justify-content: space-around;
-        border-color: $colorPrincipalLogo;
-        border: 1px solid;
+        padding: 5px;
     }
 }
 /*Formulario*/
@@ -30,10 +29,20 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    
 }
+/*.titleFormulario{
+    font-size: $sizeFontH2;
+}
+.tituloRedes{
+    @extend .titleFormulario;
+}*/
+
+
 .formulario {
-    margin: 0.2rem;
-    padding: 0.2rem;
+    margin: 1rem;
+    padding: 1rem;
     font-size: $formFontSize;   
 }
 .botonForm{
@@ -49,7 +58,7 @@
 		color: $colorFontMenuHover;
         background: $colorSecundarioLogo;
 	}
-}
+}/*
 .botonFormMenu{
     width: 20px;
     text-align: center;
@@ -62,4 +71,4 @@
 		color: black;
         background: white;
 	}
-}
+}*/
