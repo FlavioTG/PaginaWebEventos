@@ -36,10 +36,9 @@
                     "SeccionEventosCorp"
                     "SeccionCattering"
                     "SeccionBodas";
-    grid-row-gap: 100px;
-    grid-column-gap: 1000px;
     justify-content: center space-between;
     align-items: center;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
 }
 /*.mainServices {
     @include grid-set (main, grid, 1rem, 1rem);
@@ -49,8 +48,9 @@
 }*/
 .serviceSelection{
     @include grid-set (ServicesSelection, grid, 0.2rem, 0.2rem);
-    justify-content: center space-between   ;
+    justify-content: center space-between;
     align-items: center;
+    align-content: center;
 }
 
 .sectionKids{
@@ -64,9 +64,6 @@
 }
 .sectionBodas{
     @include grid-set (SeccionBodas, 0, 0.2rem, 0.2rem);
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
 }
 .sectionClass{
     h2{
@@ -223,7 +220,6 @@ p {
     text-align: center;
     background-color: transparent;
 }
-
 
 @for $i from 1 through $cantGalleryItems{
     @if $i%2 ==0{

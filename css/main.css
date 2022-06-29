@@ -87,8 +87,7 @@
   .menu ul {
     list-style-type: none; }
     .menu ul li {
-      list-style-type: none;
-      position: relative; }
+      list-style-type: none; }
       .menu ul li:hover {
         font-weight: bold; }
       .menu ul li:hover > ul {
@@ -148,10 +147,9 @@
   margin: 1rem;
   padding: 1rem;
   grid-template: "ServicesSelection" "SeccionKids" "SeccionEventosCorp" "SeccionCattering" "SeccionBodas";
-  grid-row-gap: 100px;
-  grid-column-gap: 1000px;
   justify-content: center space-between;
-  align-items: center; }
+  align-items: center;
+  grid-template-rows: 1fr 1fr 1fr 1fr; }
 
 /*.mainServices {
     @include grid-set (main, grid, 1rem, 1rem);
@@ -165,7 +163,8 @@
   margin: 0.2rem;
   padding: 0.2rem;
   justify-content: center space-between;
-  align-items: center; }
+  align-items: center;
+  align-content: center; }
 
 .sectionKids {
   grid-area: SeccionKids;
@@ -185,10 +184,7 @@
 .sectionBodas {
   grid-area: SeccionBodas;
   margin: 0.2rem;
-  padding: 0.2rem;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center; }
+  padding: 0.2rem; }
 
 .sectionClass h2 {
   text-align: center;
@@ -529,7 +525,7 @@ p {
 }*/
 /**********************************************************/
 /*MEDIA QUERY*/
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 575px) {
   .menu {
     font-size: 18px; }
   .mainContact {
@@ -558,8 +554,53 @@ p {
     grid-template-rows: 3fr 3fr;
     justify-content: center space-between;
     align-items: center;
-    grid-row-gap: 40px;
-    grid-column-gap: 40px; }
+    grid-row-gap: 30px;
+    grid-column-gap: 30px; }
+  .mainGallery {
+    grid-area: main;
+    display: grid;
+    margin: 1.2rem;
+    padding: 0.5rem;
+    align-content: center;
+    justify-content: space-around;
+    justify-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 0.2rem; }
+  .mainGalleryCarousel {
+    display: none; } }
+
+@media screen and (min-width: 720px) {
+  .menu {
+    font-size: 18px; }
+  .mainContact {
+    grid-area: main;
+    display: grid;
+    margin: 1rem;
+    padding: 1rem;
+    grid-template-areas: "formulario infoContact" "formulario infoContact";
+    align-content: center;
+    justify-content: space-around;
+    justify-items: center; }
+  .mainAboutUs {
+    grid-area: main;
+    display: grid;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    grid-template-areas: "mainAboutUsH2 mainAboutUsH2" "mainAboutUsImage mainAboutUsP" "mainAboutUsImage mainAboutUsP";
+    justify-content: center;
+    justify-items: center; }
+  .serviceSelection {
+    grid-area: ServicesSelection;
+    display: grid;
+    margin: 0;
+    padding: 0;
+    grid-template-columns: 3fr 3fr 3fr;
+    grid-template-rows: 3fr 3fr;
+    justify-content: center space-between;
+    align-items: center;
+    grid-row-gap: 30px;
+    grid-column-gap: 30px; }
   .mainGallery {
     grid-area: main;
     display: grid;
