@@ -114,38 +114,42 @@
 .mainInit {
   grid-area: main;
   display: grid;
-  margin: 1rem;
-  padding: 1rem;
+  margin: 0;
+  padding: 0;
   grid-template-areas: "mainInitVideo" "mainInitP";
   align-content: center;
-  justify-content: center;
   justify-items: center; }
 
 .mainInitP {
   grid-area: mainInitP;
-  margin: 0.2rem;
-  padding: 0.2rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
   text-align: center;
   font-size: 1rem; }
 
 .mainInitVideo {
   grid-area: mainInitVideo;
-  margin: 0.2rem;
-  padding: 0.2rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
   width: 100%; }
-  .mainInitVideo .img {
-    height: 100px; }
 
 .itemImageInicio {
-  max-height: 300px;
-  max-width: 100%; }
+  max-height: 400px;
+  min-width: 100%;
+  width: 100%;
+  border-radius: 2rem;
+  border: 3px solid #94bbe9;
+  box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1); }
 
-.itemInfoInicio p {
-  color: white;
-  font-size: 30px;
-  width: auto;
-  align-self: center;
-  border-radius: 5px; }
+.itemInfoInicio {
+  text-align: center;
+  background-color: transparent; }
+  .itemInfoInicio p {
+    color: white;
+    font-size: 30px;
+    width: auto;
+    align-self: center;
+    border-radius: 5px; }
 
 /*******************************************/
 /*Pagina Servicios Main*/
@@ -326,13 +330,13 @@ p {
   grid-area: main;
   display: none; }
 
-.itemImage, .itemImageInicio, .itemImageCarousel {
+.itemImage, .itemImageCarousel {
   width: 100%;
   border-radius: 2rem;
   border: 3px solid #94bbe9;
   box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1); }
 
-.itemInfo, .itemInfoInicio, .itemInfoCarousel {
+.itemInfo, .itemInfoCarousel {
   text-align: center;
   background-color: transparent; }
 
@@ -661,7 +665,7 @@ p {
     margin: 1.2rem;
     padding: 0.5rem;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2.66667, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     gap: 0.2rem;
     align-content: center;
     justify-content: space-around;
