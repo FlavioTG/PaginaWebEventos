@@ -116,49 +116,6 @@
   text-align: center; }
 
 /*******************************************/
-/*Pagina Inicio */
-.mainInit {
-  grid-area: main;
-  display: grid;
-  margin: 0.2rem;
-  padding: 0.2rem;
-  grid-template-areas: "mainInitVideo" "mainInitP";
-  align-content: center;
-  justify-items: center; }
-
-.mainInitVideo {
-  grid-area: mainInitVideo;
-  margin: 0.5rem;
-  padding: 0.5rem;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 50vh;
-  background: transparent; }
-  .mainInitVideo a {
-    text-decoration: none;
-    color: inherit;
-    font-size: 30px; }
-  .mainInitVideo .mainInitP {
-    font-weight: 700;
-    text-align: center;
-    font-size: 36px;
-    background: linear-gradient(90deg, #42C2FF, #94bbe9, #42C2FF);
-    letter-spacing: 5px;
-    background-repeat: no-repeat;
-    background-size: 80%;
-    animation: shine 5s linear infinite;
-    position: relative; }
-
-@keyframes shine {
-  0% {
-    background-position-x: -500%; }
-  100% {
-    background-position-x: 500%; } }
-
-/*******************************************/
 /*Pagina Servicios Main*/
 .mainServices {
   grid-area: main;
@@ -469,6 +426,51 @@ p {
     font-size: 20px;
     font-style: oblique;
     font: message-box; }
+
+/*******************************************/
+/*Pagina Inicio */
+.mainInit {
+  grid-area: main;
+  display: grid;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  grid-template-areas: "mainInitVideo" "mainInitP";
+  align-content: center;
+  justify-items: center; }
+
+.mainInitVideo {
+  grid-area: mainInitVideo;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  background: url("/img/background3.png");
+  background-size: 150%;
+  overflow: hidden; }
+  .mainInitVideo a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 30px; }
+  .mainInitVideo .mainInitP {
+    font-weight: 700;
+    text-align: center;
+    font-size: 36px;
+    background: linear-gradient(90deg, #42C2FF, #94bbe9, #42C2FF);
+    letter-spacing: 5px;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: shine 5s linear infinite;
+    position: relative; }
+
+@keyframes shine {
+  0% {
+    background-position-x: -500%; }
+  100% {
+    background-position-x: 500%; } }
 
 /***********************************************************/
 /*Pagina Contacto*/
