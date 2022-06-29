@@ -22,9 +22,21 @@
         height: 100px;
     }
 }
-.imagencita{
-    height: 100px;
-
+.itemImageInicio {
+    @extend .itemImage;
+    max-height: 300px;
+    max-width:100%;
+}
+.itemInfoInicio{
+    @extend .itemInfo;
+    p{
+        color: white;
+        font-size: 30px;
+        width: auto;
+        align-self: center;
+        //background-color: $colorSecundarioMenu;
+        border-radius: 5px;
+    }
 }
 
 /*******************************************/

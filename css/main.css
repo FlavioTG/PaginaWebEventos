@@ -136,8 +136,16 @@
   .mainInitVideo .img {
     height: 100px; }
 
-.imagencita {
-  height: 100px; }
+.itemImageInicio {
+  max-height: 300px;
+  max-width: 100%; }
+
+.itemInfoInicio p {
+  color: white;
+  font-size: 30px;
+  width: auto;
+  align-self: center;
+  border-radius: 5px; }
 
 /*******************************************/
 /*Pagina Servicios Main*/
@@ -318,13 +326,13 @@ p {
   grid-area: main;
   display: none; }
 
-.itemImage, .itemImageCarousel {
+.itemImage, .itemImageInicio, .itemImageCarousel {
   width: 100%;
   border-radius: 2rem;
   border: 3px solid #94bbe9;
   box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1); }
 
-.itemInfo, .itemInfoCarousel {
+.itemInfo, .itemInfoInicio, .itemInfoCarousel {
   text-align: center;
   background-color: transparent; }
 
