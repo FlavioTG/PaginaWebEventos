@@ -1,11 +1,7 @@
-//Paleta de colores
+//Header
+$sizeFontLogo:20px;
 $colorPrincipalLogo: #6AA84F;
 $colorSecundarioLogo: #4AF873;
-
-//Header
-//$colorPrincipalLogo: #882D2Fff;
-//$colorSecundarioLogo:#D1CAB8ff;
-$sizeFontLogo:20px;
 $colorFontLogo:black;
 $sizeFontH1: 30px;
 $sizeFontH2: 25px;
@@ -13,7 +9,7 @@ $sizeFontH3: 20px;
 $sizeFontH4: 18px;
 $sizeFontH5: 15px;
 $sizeFontH6: 12px;
-$sizeFontP: 12px;
+$sizeFontP: 14px;
 
 //Menu
 $colorPrincipalMenu: #42C2FF;
@@ -44,11 +40,14 @@ $sizeFontReviewsLi:15px;
 
 //Mediaquerys
 $widthCell: 575px;
-$widthTablet: 720px;
+$widthTablet: 900px;
 $widthHD1360: 1360px;
 $cantGalleryItems: 8;
 $widthTabletFont: 18px;
 $widthHD1360Font: 20px;
+
+//Carrousell
+$delayCarrousel: "2500";
 
 //
 /* SCSS HEX */

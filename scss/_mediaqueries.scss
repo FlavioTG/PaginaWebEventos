@@ -72,8 +72,8 @@
 
     .serviceSelection {
         @include grid-set (ServicesSelection,grid,0, 0);
-        grid-template-columns: 3fr 3fr 3fr ;
-        grid-template-rows: 3fr 3fr;
+        grid-template-columns: 3fr 3fr 3fr;
+        grid-template-rows: 1fr 1fr;
         justify-content:center space-between;
         align-items: center;
         grid-row-gap: 30px;

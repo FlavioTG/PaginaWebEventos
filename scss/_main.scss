@@ -1,41 +1,48 @@
 /*******************************************/
 /*Pagina Inicio */
 .mainInit {
-    @include grid-set (main, grid, 0,0);
+    @include grid-set (main, grid, 0.2rem, 0.2rem);
     grid-template-areas: "mainInitVideo"
         "mainInitP";
     align-content: center;
     justify-items: center;
 }
 
-.mainInitP {
-    @include grid-set (mainInitP, 0, 0.5rem, 0.5rem);
-    text-align: center;
-    font-size: 1rem;
-}
-
 .mainInitVideo {
     @include grid-set (mainInitVideo, 0, 0.5rem, 0.5rem);
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    background: transparent;
+    a {
+        text-decoration: none;
+        color: inherit;
+        font-size: $sizeFontH1;
+    }
+
+    .mainInitP  {
+        font-weight: 700;
+        text-align: center;
+        font-size: $sizeFontH1*1.2;
+        background: linear-gradient(90deg, $colorPrincipalMenu,$colorSecundarioMenu, $colorPrincipalMenu);
+        letter-spacing: 5px;
+        background-repeat: no-repeat;
+        background-size: 80%;
+        animation: shine 5s linear infinite;
+        position: relative;
+    }
 }
-.itemImageInicio {
-    max-height: 400px;
-    min-width:100%;
-    width: 100%;
-    border-radius: 2rem;
-    border: 3px solid $colorSecundarioMenu;
-    box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
-}
-.itemInfoInicio{
-    text-align: center;
-    background-color: transparent;
-    p{
-        color: white;
-        font-size: 30px;
-        width: auto;
-        align-self: center;
-        //background-color: $colorSecundarioMenu;
-        border-radius: 5px;
+
+@keyframes shine {
+    0% {
+        background-position-x: -500%;
+    }
+
+    100% {
+        background-position-x: 500%;
     }
 }
 
@@ -44,47 +51,53 @@
 .mainServices {
     @include grid-set (main, grid, 1rem, 1rem);
     grid-template: "ServicesSelection"
-                    "SeccionKids"
-                    "SeccionEventosCorp"
-                    "SeccionCattering"
-                    "SeccionBodas";
+        "SeccionKids"
+        "SeccionEventosCorp"
+        "SeccionCattering"
+        "SeccionBodas";
     justify-content: center space-between;
     align-items: center;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 0.5fr 0.5fr 0.5fr 0.5fr;
 }
+
 /*.mainServices {
     @include grid-set (main, grid, 1rem, 1rem);
     justify-content: center space-between;
     align-items: center;
     grid-row-gap: 30px;
 }*/
-.serviceSelection{
+.serviceSelection {
     @include grid-set (ServicesSelection, grid, 0.2rem, 0.2rem);
     justify-content: center space-between;
     align-items: center;
     align-content: center;
 }
 
-.sectionKids{
-    @include grid-set (SeccionKids, 0, 0.2rem, 0.2rem);   
+.sectionKids {
+    @include grid-set (SeccionKids, 0, 0.2rem, 0.2rem);
 }
-.sectionCorporative{
+
+.sectionCorporative {
     @include grid-set (SeccionEventosCorp, 0, 0.2rem, 0.2rem);
 }
-.sectionCattering{
+
+.sectionCattering {
     @include grid-set (SeccionCattering, 0, 0.2rem, 0.2rem);
 }
-.sectionBodas{
+
+.sectionBodas {
     @include grid-set (SeccionBodas, 0, 0.2rem, 0.2rem);
 }
-.sectionClass{
-    h2{
+
+.sectionClass {
+    h2 {
         text-align: center;
         font-size: $sizeFontH2;
     }
-    p{
+
+    p {
         text-align: center;
-        font-size: $sizeFontP;
+        font-size: $sizeFontReviewsP;
     }
 }
 
@@ -221,6 +234,7 @@ p {
 .mainGallery {
     @include grid-set (main, none, 1.2rem, 0.5rem);
 }
+
 .itemImage {
     width: 100%;
     border-radius: 2rem;
@@ -228,21 +242,23 @@ p {
     box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
 }
 
-.itemInfo{
+.itemInfo {
     text-align: center;
     background-color: transparent;
 }
 
-@for $i from 1 through $cantGalleryItems{
-    @if $i%2 ==0{
-        .item#{$i}{
+@for $i from 1 through $cantGalleryItems {
+    @if $i%2 ==0 {
+        .item#{$i} {
             //@include grid-set (imagen#{$i}, 0, 0.5rem, 0.5rem);
-            @include gallery-item (90%,100%,rotate(3deg),black,width 2s);    
+            @include gallery-item (90%, 100%, rotate(3deg), black, width 2s);
         }
-    }@else{
-        .item#{$i}{
+    }
+
+    @else {
+        .item#{$i} {
             //@include grid-set (imagen#{$i}, 0, 0.5rem, 0.5rem);
-            @include gallery-item (90%,100%,rotate(-3deg),black,width 2s);    
+            @include gallery-item (90%, 100%, rotate(-3deg), black, width 2s);
         }
     }
 }
@@ -250,11 +266,13 @@ p {
 .itemImageCarousel {
     @extend .itemImage;
     max-height: 235px auto;
-    max-width:100%;
+    max-width: 100%;
 }
-.itemInfoCarousel{
+
+.itemInfoCarousel {
     @extend .itemInfo;
-    p{
+
+    p {
         color: black;
         width: fit-content;
         opacity: 65%;

@@ -5,9 +5,9 @@
 
 .headerLogo {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    //position: center;
     width: 7rem;
     height: 7rem;
     border-radius: 50%;
@@ -22,6 +22,11 @@
 }
 
 .headerLogoTitle {
+    color: $colorFontLogo;
+    font-size: $sizeFontLogo;
+    text-decoration: solid;
+}
+.headerLogoSubTitle {
     color: $colorFontLogo;
     font-size: $sizeFontLogo;
     text-decoration: solid;
