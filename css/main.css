@@ -133,8 +133,12 @@
   grid-area: mainInitVideo;
   margin: 0.2rem;
   padding: 0.2rem;
-  width: 100%;
-  height: 40vh; }
+  width: 100%; }
+  .mainInitVideo .img {
+    height: 100px; }
+
+.imagencita {
+  height: 100px; }
 
 /*******************************************/
 /*Pagina Servicios Main*/
@@ -143,9 +147,56 @@
   display: grid;
   margin: 1rem;
   padding: 1rem;
+  grid-template: "ServicesSelection" "SeccionKids" "SeccionEventosCorp" "SeccionCattering" "SeccionBodas";
+  grid-row-gap: 100px;
+  grid-column-gap: 1000px;
   justify-content: center space-between;
-  align-items: center;
-  grid-row-gap: 30px; }
+  align-items: center; }
+
+/*.mainServices {
+    @include grid-set (main, grid, 1rem, 1rem);
+    justify-content: center space-between;
+    align-items: center;
+    grid-row-gap: 30px;
+}*/
+.serviceSelection {
+  grid-area: ServicesSelection;
+  display: grid;
+  margin: 0.2rem;
+  padding: 0.2rem;
+  justify-content: center space-between;
+  align-items: center; }
+
+.sectionKids {
+  grid-area: SeccionKids;
+  margin: 0.2rem;
+  padding: 0.2rem; }
+
+.sectionCorporative {
+  grid-area: SeccionEventosCorp;
+  margin: 0.2rem;
+  padding: 0.2rem; }
+
+.sectionCattering {
+  grid-area: SeccionCattering;
+  margin: 0.2rem;
+  padding: 0.2rem; }
+
+.sectionBodas {
+  grid-area: SeccionBodas;
+  margin: 0.2rem;
+  padding: 0.2rem;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; }
+
+.sectionClass h2 {
+  text-align: center;
+  font-size: 25px; }
+
+.sectionClass p {
+  text-align: center;
+  font-size: 12px; }
 
 /*contendor :tarjeta de los eventos
   Dentro de este
@@ -156,7 +207,7 @@
 .eventCard {
   display: flex;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
-  background-color: #94bbe9;
+  background: linear-gradient(90deg, #94bbe9, #42C2FF);
   min-width: 200px;
   min-height: 250px;
   flex-direction: column;
@@ -178,7 +229,7 @@
 .eventName {
   color: black;
   text-align: center;
-  width: 100%; }
+  font-size: 20px; }
 
 p {
   text-align: center; }
@@ -271,25 +322,23 @@ p {
   grid-area: main;
   display: none; }
 
-.itemImage {
+.itemImage, .itemImageCarousel {
   width: 100%;
   border-radius: 2rem;
   border: 3px solid #94bbe9;
   box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1); }
 
-.itemInfo {
+.itemInfo, .itemInfoCarousel {
   text-align: center;
   background-color: transparent; }
-  .itemInfo :hover {
-    background-color: violet; }
 
 .item1 {
   width: 90%;
   transform: rotate(-3deg);
   color: transparent;
-  transition: width 1s; }
+  transition: width 2s; }
   .item1:hover {
-    transition: width 1s;
+    transition: width 2s;
     width: 100%;
     transform: rotate(0deg);
     color: black; }
@@ -298,9 +347,9 @@ p {
   width: 90%;
   transform: rotate(3deg);
   color: transparent;
-  transition: width 1s; }
+  transition: width 2s; }
   .item2:hover {
-    transition: width 1s;
+    transition: width 2s;
     width: 100%;
     transform: rotate(0deg);
     color: black; }
@@ -309,9 +358,9 @@ p {
   width: 90%;
   transform: rotate(-3deg);
   color: transparent;
-  transition: width 1s; }
+  transition: width 2s; }
   .item3:hover {
-    transition: width 1s;
+    transition: width 2s;
     width: 100%;
     transform: rotate(0deg);
     color: black; }
@@ -320,9 +369,9 @@ p {
   width: 90%;
   transform: rotate(3deg);
   color: transparent;
-  transition: width 1s; }
+  transition: width 2s; }
   .item4:hover {
-    transition: width 1s;
+    transition: width 2s;
     width: 100%;
     transform: rotate(0deg);
     color: black; }
@@ -331,9 +380,9 @@ p {
   width: 90%;
   transform: rotate(-3deg);
   color: transparent;
-  transition: width 1s; }
+  transition: width 2s; }
   .item5:hover {
-    transition: width 1s;
+    transition: width 2s;
     width: 100%;
     transform: rotate(0deg);
     color: black; }
@@ -342,9 +391,9 @@ p {
   width: 90%;
   transform: rotate(3deg);
   color: transparent;
-  transition: width 1s; }
+  transition: width 2s; }
   .item6:hover {
-    transition: width 1s;
+    transition: width 2s;
     width: 100%;
     transform: rotate(0deg);
     color: black; }
@@ -353,9 +402,9 @@ p {
   width: 90%;
   transform: rotate(-3deg);
   color: transparent;
-  transition: width 1s; }
+  transition: width 2s; }
   .item7:hover {
-    transition: width 1s;
+    transition: width 2s;
     width: 100%;
     transform: rotate(0deg);
     color: black; }
@@ -364,12 +413,24 @@ p {
   width: 90%;
   transform: rotate(3deg);
   color: transparent;
-  transition: width 1s; }
+  transition: width 2s; }
   .item8:hover {
-    transition: width 1s;
+    transition: width 2s;
     width: 100%;
     transform: rotate(0deg);
     color: black; }
+
+.itemImageCarousel {
+  max-height: 235px auto;
+  max-width: 100%; }
+
+.itemInfoCarousel p {
+  color: black;
+  width: fit-content;
+  opacity: 65%;
+  background-color: #94bbe9;
+  margin-block-start: 0;
+  border-radius: 5px; }
 
 /***********************************************************/
 /*Pagina Reviews*/
@@ -488,17 +549,17 @@ p {
     grid-template-areas: "mainAboutUsH2 mainAboutUsH2" "mainAboutUsImage mainAboutUsP" "mainAboutUsImage mainAboutUsP";
     justify-content: center;
     justify-items: center; }
-  .mainServices {
-    grid-area: main;
+  .serviceSelection {
+    grid-area: ServicesSelection;
     display: grid;
-    margin: 1rem;
-    padding: 1rem;
+    margin: 0;
+    padding: 0;
     grid-template-columns: 3fr 3fr;
     grid-template-rows: 3fr 3fr;
     justify-content: center space-between;
     align-items: center;
-    grid-row-gap: 30px;
-    grid-column-gap: 30px; }
+    grid-row-gap: 40px;
+    grid-column-gap: 40px; }
   .mainGallery {
     grid-area: main;
     display: grid;
@@ -534,11 +595,11 @@ p {
     grid-template-areas: "mainAboutUsH2 mainAboutUsH2 mainAboutUsH2" "mainAboutUsImage mainAboutUsImage mainAboutUsP" "mainAboutUsImage mainAboutUsImage mainAboutUsP";
     justify-content: center;
     justify-items: center; }
-  .mainServices {
-    grid-area: main;
+  .serviceSelection {
+    grid-area: ServicesSelection;
     display: grid;
-    margin: 1rem;
-    padding: 1rem;
+    margin: 0;
+    padding: 0;
     grid-template-columns: 3fr 3fr 3fr 3fr;
     grid-template-rows: 3fr;
     justify-content: center space-between;
@@ -564,7 +625,7 @@ a {
   text-decoration: none; }
 
 body {
-  background-image: url("../img/background3.png");
+  background-image: url("../img/background2.png");
   background-color: white;
   background-size: initial;
   background-repeat: repeat;

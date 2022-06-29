@@ -18,16 +18,65 @@
 .mainInitVideo {
     @include grid-set (mainInitVideo, 0, 0.2rem, 0.2rem);
     width: 100%;
-    height: 40vh;
+    .img{
+        height: 100px;
+    }
+}
+.imagencita{
+    height: 100px;
+
 }
 
 /*******************************************/
 /*Pagina Servicios Main*/
 .mainServices {
     @include grid-set (main, grid, 1rem, 1rem);
+    grid-template: "ServicesSelection"
+                    "SeccionKids"
+                    "SeccionEventosCorp"
+                    "SeccionCattering"
+                    "SeccionBodas";
+    grid-row-gap: 100px;
+    grid-column-gap: 1000px;
+    justify-content: center space-between;
+    align-items: center;
+}
+/*.mainServices {
+    @include grid-set (main, grid, 1rem, 1rem);
     justify-content: center space-between;
     align-items: center;
     grid-row-gap: 30px;
+}*/
+.serviceSelection{
+    @include grid-set (ServicesSelection, grid, 0.2rem, 0.2rem);
+    justify-content: center space-between   ;
+    align-items: center;
+}
+
+.sectionKids{
+    @include grid-set (SeccionKids, 0, 0.2rem, 0.2rem);   
+}
+.sectionCorporative{
+    @include grid-set (SeccionEventosCorp, 0, 0.2rem, 0.2rem);
+}
+.sectionCattering{
+    @include grid-set (SeccionCattering, 0, 0.2rem, 0.2rem);
+}
+.sectionBodas{
+    @include grid-set (SeccionBodas, 0, 0.2rem, 0.2rem);
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.sectionClass{
+    h2{
+        text-align: center;
+        font-size: $sizeFontH2;
+    }
+    p{
+        text-align: center;
+        font-size: $sizeFontP;
+    }
 }
 
 /*contendor :tarjeta de los eventos
@@ -39,7 +88,9 @@
 .eventCard {
     display: flex;
     transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
-    background-color: $colorSecundarioMenu;
+    $colorPriMenu: map-get($colorMenu, principal);
+    $colorSecMenu: map-get($colorMenu, secundario);
+    background: linear-gradient($linearGradientFooter/2, $colorSecMenu, $colorPriMenu);
     min-width: 200px;
     min-height: 250px;
     flex-direction: column;
@@ -64,7 +115,7 @@
 .eventName {
     color: black;
     text-align: center;
-    width: 100%;
+    font-size: $sizeFontH3;
 }
 
 p {
@@ -167,12 +218,10 @@ p {
     border: 3px solid $colorSecundarioMenu;
     box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
 }
+
 .itemInfo{
     text-align: center;
     background-color: transparent;
-    & :hover{
-        background-color: violet;
-    }
 }
 
 
@@ -180,13 +229,30 @@ p {
     @if $i%2 ==0{
         .item#{$i}{
             //@include grid-set (imagen#{$i}, 0, 0.5rem, 0.5rem);
-            @include gallery-item (90%,100%,rotate(3deg),black,width 1s);    
+            @include gallery-item (90%,100%,rotate(3deg),black,width 2s);    
         }
     }@else{
         .item#{$i}{
             //@include grid-set (imagen#{$i}, 0, 0.5rem, 0.5rem);
-            @include gallery-item (90%,100%,rotate(-3deg),black,width 1s);    
+            @include gallery-item (90%,100%,rotate(-3deg),black,width 2s);    
         }
+    }
+}
+
+.itemImageCarousel {
+    @extend .itemImage;
+    max-height: 235px auto;
+    max-width:100%;
+}
+.itemInfoCarousel{
+    @extend .itemInfo;
+    p{
+        color: black;
+        width: fit-content;
+        opacity: 65%;
+        background-color: $colorSecundarioMenu;
+        margin-block-start: 0;
+        border-radius: 5px;
     }
 }
 

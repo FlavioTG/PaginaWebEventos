@@ -24,14 +24,14 @@
         justify-items: center;
     }
 
-    .mainServices {
-        @include grid-set (main,grid,1rem, 1rem);
+    .serviceSelection {
+        @include grid-set (ServicesSelection,grid,0, 0);
         grid-template-columns: 3fr 3fr;
         grid-template-rows: 3fr 3fr;
         justify-content:center space-between;
         align-items: center;
-        grid-row-gap: 30px;
-        grid-column-gap: 30px;
+        grid-row-gap: 40px;
+        grid-column-gap: 40px;
     }
 
     .mainGallery {
@@ -70,8 +70,8 @@
         justify-items: center;
     }
 
-    .mainServices {
-        @include grid-set (main,grid,1rem, 1rem);
+    .serviceSelection {
+        @include grid-set (ServicesSelection,grid,0, 0);
         grid-template-columns: 3fr 3fr 3fr 3fr;
         grid-template-rows: 3fr;
         justify-content:center space-between;
