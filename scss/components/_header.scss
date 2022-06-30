@@ -1,6 +1,6 @@
 /* estilos del titulo principal */
 .headerInit {
-    @include grid-set (header,0,1rem, 1rem);
+    @include grid-set (header, 0, 1rem, 1rem);
 }
 
 .headerLogo {
@@ -8,12 +8,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 7rem;
-    height: 7rem;
+    width: 7.5rem;
+    height: 7.5rem;
     border-radius: 50%;
-    //$colorPriLogo: map-get($colorLogo,principal);
-    //$colorSecLogo: map-get($colorLogo,secundario);
-    //background: radial-gradient(circle, $colorPriLogo, $colorSecLogo);
     background: url("../img/background3.png");
     margin: 0 auto;
     animation-name: logoItemAction;
@@ -27,6 +24,7 @@
     font-size: $sizeFontLogo;
     text-decoration: solid;
 }
+
 .headerLogoSubTitle {
     color: $colorFontLogo;
     font-size: $sizeFontLogo*0.8;

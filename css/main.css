@@ -9,7 +9,6 @@
   font-style: normal;
   font-family: 'Courier New', Courier, monospace; }
 
-/* SCSS HEX */
 .containerPrincipal {
   display: grid;
   height: 100vh;
@@ -29,8 +28,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 7rem;
-  height: 7rem;
+  width: 7.5rem;
+  height: 7.5rem;
   border-radius: 50%;
   background: url("../img/background3.png");
   margin: 0 auto;
@@ -393,7 +392,7 @@ p {
   padding: 1rem;
   flex-direction: column;
   align-content: center;
-  justify-content: center; }
+  justify-content: flex-start; }
   .mainReviews h2 {
     font-size: 26px;
     text-align: center; }
@@ -429,7 +428,7 @@ p {
   justify-content: center;
   align-items: center;
   min-height: 50vh;
-  background: url("/img/background3.png");
+  background: url("../img/background3.png");
   background-size: 150%;
   overflow: hidden; }
   .mainInitVideo a {
@@ -489,12 +488,6 @@ p {
   align-items: center;
   width: 100%; }
 
-/*.titleFormulario{
-    font-size: $sizeFontH2;
-}
-.tituloRedes{
-    @extend .titleFormulario;
-}*/
 .formulario {
   margin: 1rem;
   padding: 1rem;
@@ -511,20 +504,6 @@ p {
     color: whitesmoke;
     background: #4AF873; }
 
-/*
-.botonFormMenu{
-    width: 20px;
-    text-align: center;
-	border-radius: 7px;
-	border-bottom-left-radius: 0;
-	transition: all 0.4s;
-    background: white;
-	&:hover {
-		border-radius: 10px;
-		color: black;
-        background: white;
-	}
-}*/
 /**********************************************************/
 /*MEDIA QUERY*/
 @media screen and (min-width: 575px) {
@@ -670,7 +649,6 @@ a {
 
 body {
   background-image: url("../img/background2.png");
-  background-color: white;
   background-size: initial;
   background-repeat: repeat;
   font-family: "Tahoma"; }
