@@ -1,21 +1,23 @@
 /**********************************************************/
 /*Estilos footer*/
 .footerInit {
-    @include grid-set (footer,0,1rem, 1rem);
+    @include grid-set (footer, 0, 1rem, 1rem);
     display: flex;
     flex: row;
     margin-bottom: 5px;
     justify-content: space-between;
     border-radius: 1rem;
-    $colorSecMenu: map-get($colorMenu,principal);
-    $colorPriMenu: map-get($colorMenu,secundario);
+    $colorSecMenu: map-get($colorMenu, principal);
+    $colorPriMenu: map-get($colorMenu, secundario);
     background: linear-gradient($linearGradientFooter, $colorPriMenu, $colorSecMenu);
+
     .footerIcons {
         align-content: end;
     }
+
     h3 {
-            font: bold;
-            font-size: small;
-            text-align: end;
-        }
+        font: bold;
+        font-size: small;
+        text-align: end;
+    }
 }

@@ -1,35 +1,13 @@
 /*******************************************/
-/*Pagina Inicio */
-.mainInit {
-    @include grid-set (main, grid, 1rem, 1rem);
-    grid-template-areas: "mainInitVideo"
-        "mainInitP";
-    align-content: center;
-    justify-content: center;
-    justify-items: center;
-}
-
-.mainInitP {
-    @include grid-set (mainInitP, 0, 0.2rem, 0.2rem);
-    text-align: center;
-    font-size: 1rem;
-}
-
-.mainInitVideo {
-    @include grid-set (mainInitVideo, 0, 0.2rem, 0.2rem);
-    width: 100%;
-    height: 40vh;
-}
-
-/*******************************************/
 /*Pagina Servicios Main*/
 .mainServices {
     @include grid-set (main, grid, 1rem, 1rem);
+    grid-template:"SeccionKids""SeccionCorporativa""SeccionCattering""SeccionBodas";
     justify-content: center space-between;
     align-items: center;
     grid-row-gap: 30px;
+    
 }
-
 /*contendor :tarjeta de los eventos
   Dentro de este
     .eventImage .eventImage--hover
@@ -39,7 +17,9 @@
 .eventCard {
     display: flex;
     transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
-    background-color: $colorSecundarioMenu;
+    $colorPriMenu: map-get($colorMenu, principal);
+    $colorSecMenu: map-get($colorMenu, secundario);
+    background: linear-gradient($linearGradientFooter/2, $colorSecMenu, $colorPriMenu);
     min-width: 200px;
     min-height: 250px;
     flex-direction: column;
@@ -64,31 +44,47 @@
 .eventName {
     color: black;
     text-align: center;
-    width: 100%;
+    font-size: $sizeFontH3;
 }
 
 p {
     text-align: center;
 }
 
+.eventKids{
+    @include grid-set (SeccionKids, 0, 0.2rem, 0.2rem);
+}
+.eventCorporative{
+    @include grid-set (SeccionCorporativa, 0, 0.2rem, 0.2rem);
+}
+.eventCattering{
+    @include grid-set (SeccionCattering, 0, 0.2rem, 0.2rem);
+}
+.eventBodas{
+    @include grid-set (SeccionBodas, 0, 0.2rem, 0.2rem);
+}
 .eventKids .eventImage,
 .eventKids .eventImage--hover {
     background-image: url('../img/kids.jpg');
+    
 }
 
 .eventCorporative .eventImage,
 .eventCorporative .eventImage--hover {
     background-image: url('../img/corporativo.jpg');
+    
 }
 
 .eventCattering .eventImage,
 .eventCattering .eventImage--hover {
     background-image: url('../img/catering.jpg');
+    
 }
 
 .eventBodas .eventImage,
 .eventBodas .eventImage--hover {
     background-image: url('../img/boda.jpg');
+    
 }
 
 .eventImage {
@@ -117,7 +113,7 @@ p {
 
 .eventCard:hover .eventImage--hover {
     height: 100%;
-    opacity: 0.3;
+    opacity: 0.1;
 }
 
 /************************************************************/
@@ -128,8 +124,10 @@ p {
     grid-template-areas: "mainAboutUsH2"
         "mainAboutUsImage"
         "mainAboutUsP";
+    grid-row: 0.1fr 0.2fr 0.2fr;
     justify-content: center;
     justify-items: center;
+    align-content: flex-start;
 }
 
 .mainAboutUsImage {
@@ -143,12 +141,14 @@ p {
     @include grid-set (mainAboutUsH2, 0, 0.5rem, 0.5rem);
     font-size: $sizeFontH2;
     text-align: center;
+    font-style: oblique;
+
 }
 
 .mainAboutUsP {
     @include grid-set (mainAboutUsP, 0, 0.5rem, 0.5rem);
     text-align: center;
-    font-size: $sizeFontP;
+    font-size: $sizeFontP*1.2;
 }
 
 /***********************************************************/
@@ -161,32 +161,51 @@ p {
 .mainGallery {
     @include grid-set (main, none, 1.2rem, 0.5rem);
 }
+
 .itemImage {
     width: 100%;
     border-radius: 2rem;
     border: 3px solid $colorSecundarioMenu;
     box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
 }
-.itemInfo{
+
+.itemInfo {
     text-align: center;
     background-color: transparent;
-    & :hover{
-        background-color: violet;
+}
+
+@for $i from 1 through $cantGalleryItems {
+    @if $i%2 ==0 {
+        .item#{$i} {
+            //@include grid-set (imagen#{$i}, 0, 0.5rem, 0.5rem);
+            @include gallery-item (90%, 100%, rotate(3deg), black, width 2s);
+        }
+    }
+
+    @else {
+        .item#{$i} {
+            //@include grid-set (imagen#{$i}, 0, 0.5rem, 0.5rem);
+            @include gallery-item (90%, 100%, rotate(-3deg), black, width 2s);
+        }
     }
 }
 
+.itemImageCarousel {
+    @extend .itemImage;
+    max-height: 235px auto;
+    max-width: 100%;
+}
 
-@for $i from 1 through $cantGalleryItems{
-    @if $i%2 ==0{
-        .item#{$i}{
-            //@include grid-set (imagen#{$i}, 0, 0.5rem, 0.5rem);
-            @include gallery-item (90%,100%,rotate(3deg),black,width 1s);    
-        }
-    }@else{
-        .item#{$i}{
-            //@include grid-set (imagen#{$i}, 0, 0.5rem, 0.5rem);
-            @include gallery-item (90%,100%,rotate(-3deg),black,width 1s);    
-        }
+.itemInfoCarousel {
+    @extend .itemInfo;
+
+    p {
+        color: black;
+        width: fit-content;
+        opacity: 85%;
+        background-color: $colorSecundarioMenu;
+        margin-block-start: 0;
+        border-radius: 5px;
     }
 }
 
@@ -197,7 +216,7 @@ p {
     @include grid-set (main, flex, 1rem, 1rem);
     flex-direction: column;
     align-content: center;
-    justify-content: center;
+    justify-content:flex-start;
 
     h2 {
         font-size: $sizeFontReviews;

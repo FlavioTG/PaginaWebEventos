@@ -1,41 +1,87 @@
 /**********************************************************/
 /*MEDIA QUERY*/
-
-@media screen and (min-width: $widthTablet) {
-    .menu{
-        font-size:  $widthTabletFont;    
+@media screen and (min-width: $widthCell) {
+    .menu {
+        font-size: $widthTabletFont;
     }
 
     .mainContact {
         @include grid-set (main, grid, 1rem, 1rem);
         grid-template-areas: "formulario infoContact"
-                            "formulario infoContact";
+            "formulario infoContact";
         align-content: center;
         justify-content: space-around;
         justify-items: center;
     }
 
     .mainAboutUs {
-        @include grid-set (main,grid,0.5rem, 0.5rem);
+        @include grid-set (main, grid, 0.5rem, 0.5rem);
         grid-template-areas: "mainAboutUsH2 mainAboutUsH2"
             "mainAboutUsImage mainAboutUsP"
             "mainAboutUsImage mainAboutUsP";
+        grid-row: 0.1fr 0.2fr 0.2fr;
         justify-content: center;
+        justify-items: center;
+        align-content: flex-start;
+    }
+    .mainServices {
+        @include grid-set (main, grid, 1rem, 1rem);
+        grid-template:"SeccionKids"" SeccionCorporativa""SeccionCattering ""SeccionBodas";
+        justify-content: center space-between;
+        align-items: center;
+        grid-row-gap: 30px;
+        
+    }
+    .mainGallery {
+        @include grid-set (main, grid, 1.2rem, 0.5rem);
+        align-content: center;
+        justify-content: space-around;
+        justify-items: center;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat($cantGalleryItems/2, 1fr);
+        gap: 0.2rem;
+    }
+
+    .mainGalleryCarousel {
+        display: none;
+    }
+}
+
+@media screen and (min-width: $widthTablet) {
+    .menu {
+        font-size: $widthTabletFont;
+    }
+
+    .mainContact {
+        @include grid-set (main, grid, 1rem, 1rem);
+        grid-template-areas: "formulario infoContact"
+            "formulario infoContact";
+        align-content: center;
+        justify-content: space-around;
         justify-items: center;
     }
 
+    .mainAboutUs {
+        @include grid-set (main, grid, 0.5rem, 0.5rem);
+        grid-template-areas: "mainAboutUsH2 mainAboutUsH2"
+            "mainAboutUsImage mainAboutUsP"
+            "mainAboutUsImage mainAboutUsP";
+        grid-row: 0.1fr 0.2fr 0.2fr;
+        justify-content: center;
+        justify-items: center;
+        align-content: flex-start;
+    }
+
     .mainServices {
-        @include grid-set (main,grid,1rem, 1rem);
-        grid-template-columns: 3fr 3fr;
-        grid-template-rows: 3fr 3fr;
-        justify-content:center space-between;
+        @include grid-set (main, grid, 0.5rem, 0.5rem);
+        grid-template:"SeccionKids SeccionCorporativa""SeccionCattering SeccionBodas";
+        justify-content: center space-between;
         align-items: center;
         grid-row-gap: 30px;
         grid-column-gap: 30px;
     }
-
     .mainGallery {
-        @include grid-set (main,grid,1.2rem, 0.5rem);
+        @include grid-set (main, grid, 1.2rem, 0.5rem);
         align-content: center;
         justify-content: space-around;
         justify-items: center;
@@ -50,9 +96,10 @@
 }
 
 @media screen and (min-width: $widthHD1360) {
-    .menu{
-        font-size: $widthHD1360Font;    
+    .menu {
+        font-size: $widthHD1360Font;
     }
+
     .mainContact {
         @include grid-set (main, grid, 1rem, 1rem);
         grid-template-areas: "formulario infoContact";
@@ -61,29 +108,31 @@
         justify-content: space-around;
         justify-items: center;
     }
+
     .mainAboutUs {
-        @include grid-set (main,grid,1rem, 1rem);
+        @include grid-set (main, grid, 1rem, 1rem);
         grid-template-areas: "mainAboutUsH2 mainAboutUsH2 mainAboutUsH2"
             "mainAboutUsImage mainAboutUsImage mainAboutUsP"
             "mainAboutUsImage mainAboutUsImage mainAboutUsP";
+        grid-row: 0.1fr 0.2fr 0.2fr;
         justify-content: center;
         justify-items: center;
+        align-content: flex-start;
     }
 
     .mainServices {
-        @include grid-set (main,grid,1rem, 1rem);
-        grid-template-columns: 3fr 3fr 3fr 3fr;
-        grid-template-rows: 3fr;
-        justify-content:center space-between;
+        @include grid-set (main, grid, 1rem, 1rem);
+        grid-template:"SeccionKids SeccionCorporativa""SeccionCattering SeccionBodas";
+        justify-content: center space-between;
         align-items: center;
         grid-row-gap: 30px;
-        grid-column-gap: 30px;
+        
     }
 
     .mainGallery {
-        @include grid-set (main,grid,1.2rem, 0.5rem);
+        @include grid-set (main, grid, 1.2rem, 0.5rem);
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat($cantGalleryItems/3, 1fr);
+        grid-template-rows: repeat($cantGalleryItems/4, 1fr);
         gap: 0.2rem;
         align-content: center;
         justify-content: space-around;

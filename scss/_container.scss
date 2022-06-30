@@ -3,7 +3,7 @@
     height: $containerHeight;
     padding-bottom:5px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.25fr 0.5fr 3fr 0.1fr;
+    grid-template-rows: 0.25fr 0.25fr 3fr 0.1fr;
     grid-template-areas:    "header header header header"
                             "nav nav nav nav"
                             "main main main main"

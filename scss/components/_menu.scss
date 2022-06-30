@@ -5,7 +5,6 @@
     $colorPriMenu: map-get($colorMenu, principal);
     $colorSecMenu: map-get($colorMenu, secundario);
     background: linear-gradient($linearGradientFooter, $colorPriMenu, $colorSecMenu);
-    //background: transparent;
     border-radius: 1rem;
     @extend .fontWeb;
     color: $colorFontMenu;
@@ -16,12 +15,10 @@
 
         li {
             list-style-type: none;
-            position: relative;
-
+            
             &:hover {
                 font-weight: bold;
             }
-
             &:hover>ul {
                 display: block;
             }

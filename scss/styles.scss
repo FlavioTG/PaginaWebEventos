@@ -14,6 +14,7 @@
 @import "components/footer";
 @import "components/menu";
 @import "main";
+@import "mainindex";
 @import "contact";
 @import "mediaqueries";
 
@@ -24,8 +25,7 @@ a {
 }
 
 body {
-    background-image: url('../img/background3.png');
-    background-color: white;// url('../img/background3.png');
+    background-image: url('../img/background2.png');
     background-size:initial ;
     background-repeat: repeat;
     font-family: $fuentePagina;

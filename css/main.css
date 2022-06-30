@@ -9,13 +9,12 @@
   font-style: normal;
   font-family: 'Courier New', Courier, monospace; }
 
-/* SCSS HEX */
 .containerPrincipal {
   display: grid;
   height: 100vh;
   padding-bottom: 5px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 0.25fr 0.5fr 3fr 0.1fr;
+  grid-template-rows: 0.25fr 0.25fr 3fr 0.1fr;
   grid-template-areas: "header header header header" "nav nav nav nav" "main main main main" "footer footer footer footer"; }
 
 /* estilos del titulo principal */
@@ -26,12 +25,13 @@
 
 .headerLogo {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 7rem;
-  height: 7rem;
+  width: 7.5rem;
+  height: 7.5rem;
   border-radius: 50%;
-  background: radial-gradient(circle, #6AA84F, #4AF873);
+  background: url("../img/background3.png");
   margin: 0 auto;
   animation-name: logoItemAction;
   animation-duration: 10s;
@@ -41,6 +41,11 @@
 .headerLogoTitle {
   color: black;
   font-size: 20px;
+  text-decoration: solid; }
+
+.headerLogoSubTitle {
+  color: black;
+  font-size: 16px;
   text-decoration: solid; }
 
 @keyframes logoItemAction {
@@ -87,8 +92,7 @@
   .menu ul {
     list-style-type: none; }
     .menu ul li {
-      list-style-type: none;
-      position: relative; }
+      list-style-type: none; }
       .menu ul li:hover {
         font-weight: bold; }
       .menu ul li:hover > ul {
@@ -111,38 +115,13 @@
   text-align: center; }
 
 /*******************************************/
-/*Pagina Inicio */
-.mainInit {
-  grid-area: main;
-  display: grid;
-  margin: 1rem;
-  padding: 1rem;
-  grid-template-areas: "mainInitVideo" "mainInitP";
-  align-content: center;
-  justify-content: center;
-  justify-items: center; }
-
-.mainInitP {
-  grid-area: mainInitP;
-  margin: 0.2rem;
-  padding: 0.2rem;
-  text-align: center;
-  font-size: 1rem; }
-
-.mainInitVideo {
-  grid-area: mainInitVideo;
-  margin: 0.2rem;
-  padding: 0.2rem;
-  width: 100%;
-  height: 40vh; }
-
-/*******************************************/
 /*Pagina Servicios Main*/
 .mainServices {
   grid-area: main;
   display: grid;
   margin: 1rem;
   padding: 1rem;
+  grid-template: "SeccionKids" "SeccionCorporativa" "SeccionCattering" "SeccionBodas";
   justify-content: center space-between;
   align-items: center;
   grid-row-gap: 30px; }
@@ -156,7 +135,7 @@
 .eventCard {
   display: flex;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
-  background-color: #94bbe9;
+  background: linear-gradient(90deg, #94bbe9, #42C2FF);
   min-width: 200px;
   min-height: 250px;
   flex-direction: column;
@@ -178,10 +157,30 @@
 .eventName {
   color: black;
   text-align: center;
-  width: 100%; }
+  font-size: 20px; }
 
 p {
   text-align: center; }
+
+.eventKids {
+  grid-area: SeccionKids;
+  margin: 0.2rem;
+  padding: 0.2rem; }
+
+.eventCorporative {
+  grid-area: SeccionCorporativa;
+  margin: 0.2rem;
+  padding: 0.2rem; }
+
+.eventCattering {
+  grid-area: SeccionCattering;
+  margin: 0.2rem;
+  padding: 0.2rem; }
+
+.eventBodas {
+  grid-area: SeccionBodas;
+  margin: 0.2rem;
+  padding: 0.2rem; }
 
 .eventKids .eventImage,
 .eventKids .eventImage--hover {
@@ -223,7 +222,7 @@ p {
 
 .eventCard:hover .eventImage--hover {
   height: 100%;
-  opacity: 0.3; }
+  opacity: 0.1; }
 
 /************************************************************/
 /*EPagina Sobre Nosotros*/
@@ -234,8 +233,10 @@ p {
   margin: 1rem;
   padding: 1rem;
   grid-template-areas: "mainAboutUsH2" "mainAboutUsImage" "mainAboutUsP";
+  grid-row: 0.1fr 0.2fr 0.2fr;
   justify-content: center;
-  justify-items: center; }
+  justify-items: center;
+  align-content: flex-start; }
 
 .mainAboutUsImage {
   grid-area: mainAboutUsImage;
@@ -250,14 +251,15 @@ p {
   margin: 0.5rem;
   padding: 0.5rem;
   font-size: 25px;
-  text-align: center; }
+  text-align: center;
+  font-style: oblique; }
 
 .mainAboutUsP {
   grid-area: mainAboutUsP;
   margin: 0.5rem;
   padding: 0.5rem;
   text-align: center;
-  font-size: 12px; }
+  font-size: 16.8px; }
 
 /***********************************************************/
 /*Pagina Galeria Main*/
@@ -271,25 +273,23 @@ p {
   grid-area: main;
   display: none; }
 
-.itemImage {
+.itemImage, .itemImageCarousel {
   width: 100%;
   border-radius: 2rem;
   border: 3px solid #94bbe9;
   box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1); }
 
-.itemInfo {
+.itemInfo, .itemInfoCarousel {
   text-align: center;
   background-color: transparent; }
-  .itemInfo :hover {
-    background-color: violet; }
 
 .item1 {
   width: 90%;
   transform: rotate(-3deg);
   color: transparent;
-  transition: width 1s; }
+  transition: width 2s; }
   .item1:hover {
-    transition: width 1s;
+    transition: width 2s;
     width: 100%;
     transform: rotate(0deg);
     color: black; }
@@ -298,9 +298,9 @@ p {
   width: 90%;
   transform: rotate(3deg);
   color: transparent;
-  transition: width 1s; }
+  transition: width 2s; }
   .item2:hover {
-    transition: width 1s;
+    transition: width 2s;
     width: 100%;
     transform: rotate(0deg);
     color: black; }
@@ -309,9 +309,9 @@ p {
   width: 90%;
   transform: rotate(-3deg);
   color: transparent;
-  transition: width 1s; }
+  transition: width 2s; }
   .item3:hover {
-    transition: width 1s;
+    transition: width 2s;
     width: 100%;
     transform: rotate(0deg);
     color: black; }
@@ -320,9 +320,9 @@ p {
   width: 90%;
   transform: rotate(3deg);
   color: transparent;
-  transition: width 1s; }
+  transition: width 2s; }
   .item4:hover {
-    transition: width 1s;
+    transition: width 2s;
     width: 100%;
     transform: rotate(0deg);
     color: black; }
@@ -331,9 +331,9 @@ p {
   width: 90%;
   transform: rotate(-3deg);
   color: transparent;
-  transition: width 1s; }
+  transition: width 2s; }
   .item5:hover {
-    transition: width 1s;
+    transition: width 2s;
     width: 100%;
     transform: rotate(0deg);
     color: black; }
@@ -342,9 +342,9 @@ p {
   width: 90%;
   transform: rotate(3deg);
   color: transparent;
-  transition: width 1s; }
+  transition: width 2s; }
   .item6:hover {
-    transition: width 1s;
+    transition: width 2s;
     width: 100%;
     transform: rotate(0deg);
     color: black; }
@@ -353,9 +353,9 @@ p {
   width: 90%;
   transform: rotate(-3deg);
   color: transparent;
-  transition: width 1s; }
+  transition: width 2s; }
   .item7:hover {
-    transition: width 1s;
+    transition: width 2s;
     width: 100%;
     transform: rotate(0deg);
     color: black; }
@@ -364,12 +364,24 @@ p {
   width: 90%;
   transform: rotate(3deg);
   color: transparent;
-  transition: width 1s; }
+  transition: width 2s; }
   .item8:hover {
-    transition: width 1s;
+    transition: width 2s;
     width: 100%;
     transform: rotate(0deg);
     color: black; }
+
+.itemImageCarousel {
+  max-height: 235px auto;
+  max-width: 100%; }
+
+.itemInfoCarousel p {
+  color: black;
+  width: fit-content;
+  opacity: 85%;
+  background-color: #94bbe9;
+  margin-block-start: 0;
+  border-radius: 5px; }
 
 /***********************************************************/
 /*Pagina Reviews*/
@@ -380,7 +392,7 @@ p {
   padding: 1rem;
   flex-direction: column;
   align-content: center;
-  justify-content: center; }
+  justify-content: flex-start; }
   .mainReviews h2 {
     font-size: 26px;
     text-align: center; }
@@ -393,6 +405,52 @@ p {
     font-size: 20px;
     font-style: oblique;
     font: message-box; }
+
+/*******************************************/
+/*Pagina Inicio */
+.mainInit {
+  grid-area: main;
+  display: grid;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  grid-template-areas: "mainInitVideo" "mainInitP";
+  align-content: center;
+  justify-items: center; }
+
+.mainInitVideo {
+  grid-area: mainInitVideo;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  width: 100%;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  background: url("../img/background3.png");
+  background-size: 150%;
+  overflow: hidden; }
+  .mainInitVideo a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 30px; }
+  .mainInitVideo .mainInitP {
+    font-weight: 700;
+    text-align: center;
+    font-size: 36px;
+    background: linear-gradient(90deg, #42C2FF, #94bbe9, #42C2FF);
+    letter-spacing: 5px;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: shine 5s linear infinite;
+    position: relative; }
+
+@keyframes shine {
+  0% {
+    background-position-x: -500%; }
+  100% {
+    background-position-x: 500%; } }
 
 /***********************************************************/
 /*Pagina Contacto*/
@@ -430,12 +488,6 @@ p {
   align-items: center;
   width: 100%; }
 
-/*.titleFormulario{
-    font-size: $sizeFontH2;
-}
-.tituloRedes{
-    @extend .titleFormulario;
-}*/
 .formulario {
   margin: 1rem;
   padding: 1rem;
@@ -452,23 +504,9 @@ p {
     color: whitesmoke;
     background: #4AF873; }
 
-/*
-.botonFormMenu{
-    width: 20px;
-    text-align: center;
-	border-radius: 7px;
-	border-bottom-left-radius: 0;
-	transition: all 0.4s;
-    background: white;
-	&:hover {
-		border-radius: 10px;
-		color: black;
-        background: white;
-	}
-}*/
 /**********************************************************/
 /*MEDIA QUERY*/
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 575px) {
   .menu {
     font-size: 18px; }
   .mainContact {
@@ -486,15 +524,61 @@ p {
     margin: 0.5rem;
     padding: 0.5rem;
     grid-template-areas: "mainAboutUsH2 mainAboutUsH2" "mainAboutUsImage mainAboutUsP" "mainAboutUsImage mainAboutUsP";
+    grid-row: 0.1fr 0.2fr 0.2fr;
     justify-content: center;
-    justify-items: center; }
+    justify-items: center;
+    align-content: flex-start; }
   .mainServices {
     grid-area: main;
     display: grid;
     margin: 1rem;
     padding: 1rem;
-    grid-template-columns: 3fr 3fr;
-    grid-template-rows: 3fr 3fr;
+    grid-template: "SeccionKids" " SeccionCorporativa" "SeccionCattering " "SeccionBodas";
+    justify-content: center space-between;
+    align-items: center;
+    grid-row-gap: 30px; }
+  .mainGallery {
+    grid-area: main;
+    display: grid;
+    margin: 1.2rem;
+    padding: 0.5rem;
+    align-content: center;
+    justify-content: space-around;
+    justify-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 0.2rem; }
+  .mainGalleryCarousel {
+    display: none; } }
+
+@media screen and (min-width: 900px) {
+  .menu {
+    font-size: 18px; }
+  .mainContact {
+    grid-area: main;
+    display: grid;
+    margin: 1rem;
+    padding: 1rem;
+    grid-template-areas: "formulario infoContact" "formulario infoContact";
+    align-content: center;
+    justify-content: space-around;
+    justify-items: center; }
+  .mainAboutUs {
+    grid-area: main;
+    display: grid;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    grid-template-areas: "mainAboutUsH2 mainAboutUsH2" "mainAboutUsImage mainAboutUsP" "mainAboutUsImage mainAboutUsP";
+    grid-row: 0.1fr 0.2fr 0.2fr;
+    justify-content: center;
+    justify-items: center;
+    align-content: flex-start; }
+  .mainServices {
+    grid-area: main;
+    display: grid;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    grid-template: "SeccionKids SeccionCorporativa" "SeccionCattering SeccionBodas";
     justify-content: center space-between;
     align-items: center;
     grid-row-gap: 30px;
@@ -532,26 +616,26 @@ p {
     margin: 1rem;
     padding: 1rem;
     grid-template-areas: "mainAboutUsH2 mainAboutUsH2 mainAboutUsH2" "mainAboutUsImage mainAboutUsImage mainAboutUsP" "mainAboutUsImage mainAboutUsImage mainAboutUsP";
+    grid-row: 0.1fr 0.2fr 0.2fr;
     justify-content: center;
-    justify-items: center; }
+    justify-items: center;
+    align-content: flex-start; }
   .mainServices {
     grid-area: main;
     display: grid;
     margin: 1rem;
     padding: 1rem;
-    grid-template-columns: 3fr 3fr 3fr 3fr;
-    grid-template-rows: 3fr;
+    grid-template: "SeccionKids SeccionCorporativa" "SeccionCattering SeccionBodas";
     justify-content: center space-between;
     align-items: center;
-    grid-row-gap: 30px;
-    grid-column-gap: 30px; }
+    grid-row-gap: 30px; }
   .mainGallery {
     grid-area: main;
     display: grid;
     margin: 1.2rem;
     padding: 0.5rem;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2.66667, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     gap: 0.2rem;
     align-content: center;
     justify-content: space-around;
@@ -564,8 +648,7 @@ a {
   text-decoration: none; }
 
 body {
-  background-image: url("../img/background3.png");
-  background-color: white;
+  background-image: url("../img/background2.png");
   background-size: initial;
   background-repeat: repeat;
   font-family: "Tahoma"; }
