@@ -24,14 +24,16 @@
         justify-items: center;
         align-content: flex-start;
     }
+
     .mainServices {
         @include grid-set (main, grid, 1rem, 1rem);
-        grid-template:"SeccionKids"" SeccionCorporativa""SeccionCattering ""SeccionBodas";
+        grid-template: "SeccionKids"" SeccionCorporativa""SeccionCattering ""SeccionBodas";
         justify-content: center space-between;
         align-items: center;
         grid-row-gap: 30px;
-        
+
     }
+
     .mainGallery {
         @include grid-set (main, grid, 1.2rem, 0.5rem);
         align-content: center;
@@ -74,12 +76,13 @@
 
     .mainServices {
         @include grid-set (main, grid, 0.5rem, 0.5rem);
-        grid-template:"SeccionKids SeccionCorporativa""SeccionCattering SeccionBodas";
+        grid-template: "SeccionKids SeccionCorporativa""SeccionCattering SeccionBodas";
         justify-content: center space-between;
         align-items: center;
         grid-row-gap: 30px;
         grid-column-gap: 30px;
     }
+
     .mainGallery {
         @include grid-set (main, grid, 1.2rem, 0.5rem);
         align-content: center;
@@ -122,11 +125,11 @@
 
     .mainServices {
         @include grid-set (main, grid, 1rem, 1rem);
-        grid-template:"SeccionKids SeccionCorporativa""SeccionCattering SeccionBodas";
+        grid-template: "SeccionKids SeccionCorporativa""SeccionCattering SeccionBodas";
         justify-content: center space-between;
         align-items: center;
         grid-row-gap: 30px;
-        
+
     }
 
     .mainGallery {

@@ -20,17 +20,18 @@
     background: url("../img/background3.png");
     background-size: 150%;
     overflow: hidden;
+
     a {
         text-decoration: none;
         color: inherit;
         font-size: $sizeFontH1;
     }
 
-    .mainInitP  {
+    .mainInitP {
         font-weight: 700;
         text-align: center;
         font-size: $sizeFontH1*1.2;
-        background: linear-gradient(90deg, $colorPrincipalMenu,$colorSecundarioMenu, $colorPrincipalMenu);
+        background: linear-gradient(90deg, $colorPrincipalMenu, $colorSecundarioMenu, $colorPrincipalMenu);
         letter-spacing: 5px;
         background-repeat: no-repeat;
         background-size: 80%;

@@ -3,26 +3,30 @@
 
 .mainContact {
     @include grid-set (main, grid, 1rem, 1rem);
-    grid-template-areas:"formulario"
-                        "infoContact";
+    grid-template-areas: "formulario"
+        "infoContact";
     align-content: center;
     justify-content: center;
     justify-items: center;
 }
-.infoContact{
+
+.infoContact {
     @include grid-set (infoContact, 0, 1rem, 1rem);
     font-size: $sizeFontH3;
-    .tituloRedes{
+
+    .tituloRedes {
         text-align: center;
     }
-    .linksRedes{
-        display:flex;
+
+    .linksRedes {
+        display: flex;
         flex-direction: row;
         align-content: space-between;
         justify-content: space-around;
         padding: 5px;
     }
 }
+
 /*Formulario*/
 .infoFormulario {
     @include grid-set (formulario, 0, 0.2rem, 0.2rem);
@@ -30,25 +34,26 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    
+
 }
 
 .formulario {
     margin: 1rem;
     padding: 1rem;
-    font-size: $formFontSize;   
+    font-size: $formFontSize;
 }
-.botonForm{
+
+.botonForm {
     @extend .sub-menu;
     width: 35%;
     text-align: center;
-	border-radius: 7px;
-	border-bottom-left-radius: 0;
-	transition: all 0.4s;
-  
-	&:hover {
-		border-radius: 10px;
-		color: $colorFontMenuHover;
+    border-radius: 7px;
+    border-bottom-left-radius: 0;
+    transition: all 0.4s;
+
+    &:hover {
+        border-radius: 10px;
+        color: $colorFontMenuHover;
         background: $colorSecundarioLogo;
-	}
+    }
 }

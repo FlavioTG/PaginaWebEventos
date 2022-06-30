@@ -1,23 +1,26 @@
 @mixin grid-set ($gridName, $display, $margin, $padding) {
     grid-area: $gridName;
-    @if $display!=0 {
-        display: $display;    
-    } 
-    @if $display!=none {
+
+    @if $display !=0 {
+        display: $display;
+    }
+
+    @if $display !=none {
         margin: $margin;
         padding: $padding;
     }
 }
 
-@mixin gallery-item ($widthIni,$widthFin, $transform, $color, $transition) {
+@mixin gallery-item ($widthIni, $widthFin, $transform, $color, $transition) {
     width: $widthIni;
     transform: $transform;
     color: transparent;
     transition: $transition;
+
     &:hover {
         transition: $transition;
         width: $widthFin;
         transform: rotate(0deg);
-        color: $color;       
-    }  
+        color: $color;
+    }
 }

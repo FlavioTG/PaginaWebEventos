@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family:'Gill Sans';
+    font-family: 'Gill Sans';
 }
 
 @import "base/extend";
@@ -26,7 +26,7 @@ a {
 
 body {
     background-image: url('../img/background2.png');
-    background-size:initial ;
+    background-size: initial;
     background-repeat: repeat;
     font-family: $fuentePagina;
 }

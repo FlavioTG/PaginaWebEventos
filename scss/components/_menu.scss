@@ -15,10 +15,11 @@
 
         li {
             list-style-type: none;
-            
+
             &:hover {
                 font-weight: bold;
             }
+
             &:hover>ul {
                 display: block;
             }
