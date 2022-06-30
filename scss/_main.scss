@@ -142,18 +142,17 @@ p {
     border-radius: 2rem;
 }
 
-.mainAboutUsH2 {
+.mainAboutUsH1 {
     @include grid-set (mainAboutUsH2, 0, 0.5rem, 0.5rem);
-    font-size: $sizeFontH2;
+    font-size: $sizeFontH1;
     text-align: center;
-    font-style: oblique;
-
 }
 
 .mainAboutUsP {
     @include grid-set (mainAboutUsP, 0, 0.5rem, 0.5rem);
     text-align: center;
     font-size: $sizeFontP*1.2;
+    font-style: oblique;
 }
 
 /***********************************************************/

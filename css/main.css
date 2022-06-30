@@ -246,20 +246,20 @@ p {
   align-self: center;
   border-radius: 2rem; }
 
-.mainAboutUsH2 {
+.mainAboutUsH1 {
   grid-area: mainAboutUsH2;
   margin: 0.5rem;
   padding: 0.5rem;
-  font-size: 25px;
-  text-align: center;
-  font-style: oblique; }
+  font-size: 30px;
+  text-align: center; }
 
 .mainAboutUsP {
   grid-area: mainAboutUsP;
   margin: 0.5rem;
   padding: 0.5rem;
   text-align: center;
-  font-size: 16.8px; }
+  font-size: 16.8px;
+  font-style: oblique; }
 
 /***********************************************************/
 /*Pagina Galeria Main*/
@@ -470,7 +470,8 @@ p {
   padding: 1rem;
   font-size: 20px; }
   .infoContact .tituloRedes {
-    text-align: center; }
+    text-align: center;
+    font-size: 30px; }
   .infoContact .linksRedes {
     display: flex;
     flex-direction: row;
@@ -485,13 +486,32 @@ p {
   padding: 0.2rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 100%; }
+  align-items: center; }
+
+.titleFormulario {
+  font-size: 30px; }
 
 .formulario {
-  margin: 1rem;
-  padding: 1rem;
-  font-size: large; }
+  position: relative;
+  margin: 0.2rem;
+  padding: 0.2rem;
+  font-size: large;
+  width: 100%; }
+
+textarea {
+  width: 100%;
+  max-height: 200px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  resize: none; }
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 0;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06); }
 
 .botonForm {
   width: 35%;

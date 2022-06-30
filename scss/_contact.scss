@@ -16,6 +16,7 @@
 
     .tituloRedes {
         text-align: center;
+        font-size: $sizeFontH1;
     }
 
     .linksRedes {
@@ -33,14 +34,33 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.titleFormulario{
+    font-size: $sizeFontH1;
+}
+.formulario {
+    position: relative;
+    margin: 0.2rem;
+    padding: 0.2rem;
+    font-size: $formFontSize;
     width: 100%;
-
 }
 
-.formulario {
-    margin: 1rem;
-    padding: 1rem;
-    font-size: $formFontSize;
+textarea {
+    width: 100%;
+    max-height: 200px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 0;
+    box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
 }
 
 .botonForm {
