@@ -11,9 +11,10 @@
     width: 7rem;
     height: 7rem;
     border-radius: 50%;
-    $colorPriLogo: map-get($colorLogo,principal);
-    $colorSecLogo: map-get($colorLogo,secundario);
-    background: radial-gradient(circle, $colorPriLogo, $colorSecLogo);
+    //$colorPriLogo: map-get($colorLogo,principal);
+    //$colorSecLogo: map-get($colorLogo,secundario);
+    //background: radial-gradient(circle, $colorPriLogo, $colorSecLogo);
+    background: url("../img/background3.png");
     margin: 0 auto;
     animation-name: logoItemAction;
     animation-duration: 10s;
@@ -28,7 +29,7 @@
 }
 .headerLogoSubTitle {
     color: $colorFontLogo;
-    font-size: $sizeFontLogo;
+    font-size: $sizeFontLogo*0.8;
     text-decoration: solid;
 }
 

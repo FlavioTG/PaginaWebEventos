@@ -2,57 +2,12 @@
 /*Pagina Servicios Main*/
 .mainServices {
     @include grid-set (main, grid, 1rem, 1rem);
-    grid-template: "ServicesSelection"
-        "SeccionKids"
-        "SeccionEventosCorp"
-        "SeccionCattering"
-        "SeccionBodas";
-    justify-content: center space-between;
-    align-items: center;
-    grid-template-rows: 0.2fr 0.5fr 0.5fr 0.5fr 0.5fr;
-}
-
-/*.mainServices {
-    @include grid-set (main, grid, 1rem, 1rem);
+    grid-template:"SeccionKids""SeccionCorporativa""SeccionCattering""SeccionBodas";
     justify-content: center space-between;
     align-items: center;
     grid-row-gap: 30px;
-}*/
-.serviceSelection {
-    @include grid-set (ServicesSelection, grid, 0.2rem, 0.2rem);
-    justify-content: center space-between;
-    align-items: center;
-    align-content: center;
+    
 }
-
-.sectionKids {
-    @include grid-set (SeccionKids, 0, 0.2rem, 0.2rem);
-}
-
-.sectionCorporative {
-    @include grid-set (SeccionEventosCorp, 0, 0.2rem, 0.2rem);
-}
-
-.sectionCattering {
-    @include grid-set (SeccionCattering, 0, 0.2rem, 0.2rem);
-}
-
-.sectionBodas {
-    @include grid-set (SeccionBodas, 0, 0.2rem, 0.2rem);
-}
-
-.sectionClass {
-    h2 {
-        text-align: center;
-        font-size: $sizeFontH2;
-    }
-
-    p {
-        text-align: center;
-        font-size: $sizeFontReviewsP;
-    }
-}
-
 /*contendor :tarjeta de los eventos
   Dentro de este
     .eventImage .eventImage--hover
@@ -96,24 +51,40 @@ p {
     text-align: center;
 }
 
+.eventKids{
+    @include grid-set (SeccionKids, 0, 0.2rem, 0.2rem);
+}
+.eventCorporative{
+    @include grid-set (SeccionCorporativa, 0, 0.2rem, 0.2rem);
+}
+.eventCattering{
+    @include grid-set (SeccionCattering, 0, 0.2rem, 0.2rem);
+}
+.eventBodas{
+    @include grid-set (SeccionBodas, 0, 0.2rem, 0.2rem);
+}
 .eventKids .eventImage,
 .eventKids .eventImage--hover {
     background-image: url('../img/kids.jpg');
+    
 }
 
 .eventCorporative .eventImage,
 .eventCorporative .eventImage--hover {
     background-image: url('../img/corporativo.jpg');
+    
 }
 
 .eventCattering .eventImage,
 .eventCattering .eventImage--hover {
     background-image: url('../img/catering.jpg');
+    
 }
 
 .eventBodas .eventImage,
 .eventBodas .eventImage--hover {
     background-image: url('../img/boda.jpg');
+    
 }
 
 .eventImage {
@@ -142,7 +113,7 @@ p {
 
 .eventCard:hover .eventImage--hover {
     height: 100%;
-    opacity: 0.3;
+    opacity: 0.1;
 }
 
 /************************************************************/
@@ -153,8 +124,10 @@ p {
     grid-template-areas: "mainAboutUsH2"
         "mainAboutUsImage"
         "mainAboutUsP";
+    grid-row: 0.1fr 0.2fr 0.2fr;
     justify-content: center;
     justify-items: center;
+    align-content: flex-start;
 }
 
 .mainAboutUsImage {
@@ -168,12 +141,14 @@ p {
     @include grid-set (mainAboutUsH2, 0, 0.5rem, 0.5rem);
     font-size: $sizeFontH2;
     text-align: center;
+    font-style: oblique;
+
 }
 
 .mainAboutUsP {
     @include grid-set (mainAboutUsP, 0, 0.5rem, 0.5rem);
     text-align: center;
-    font-size: $sizeFontP;
+    font-size: $sizeFontP*1.2;
 }
 
 /***********************************************************/
